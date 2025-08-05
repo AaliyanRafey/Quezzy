@@ -1,0 +1,31 @@
+class RoutesName {
+  static const String splashScreen = '/splash_screen/';
+  static const String homeScreen = '/home_screen/';
+  static const String discoverView = '/discover_view/';
+  static const String signUp = '/signup_view/';
+  static const String signUpEmail = '/signup_email/';
+  static const String signUpPass = '/signup_pass/';
+  static const String signUpUsername = '/signup_username/';
+  static const String loginorsignup = '/login_or_signup_view/';
+  static const String mainOnboardingScreens = '/main_onboardingscreens/';
+  static const String loginView = '/login_view/';
+  static const String resetPassEmailView = '/reset_pass_email_view/';
+  static const String resetPassPasswordView = '/reset_pass_password_view/';
+  static const String mainScreen = '/main_screen/';
+  static const String createQuizOne = '/create_quiz_one_screen/';
+  static const String chooseCategory = '/choose_category/';
+  static const String quizScreen = '/quiz_screen/';
+  static const String playQuiz = '/play_quiz/';
+  static const String quiz1 = '/quiz1/';
+  static const String quiz1a = '/quiz1a/';
+  static const String quiz2 = '/quiz2/';
+  static const String quiz3 = '/quiz3/';
+  static const String quiz4 = '/quiz4/';
+  static const String quiz5 = '/quiz5/';
+  static const String quiz5a = '/quiz5a/';
+  static const String quiz6 = '/quiz6/';
+  static const String quiz7 = '/quiz7/';
+  static const String quiz8 = '/quiz8/';
+  static const String resultView = '/result_view/';
+  static const String settingView = '/setting_view/';
+}
