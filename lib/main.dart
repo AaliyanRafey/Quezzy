@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 
 import 'package:queezy_app/res/routes/routes.dart';
 import 'package:queezy_app/splash_screen/splash_Screen.dart';
-import 'package:queezy_app/views/Quiz/quiz2.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
           home: child, // Set below
         );
       },
-      child: Quiz2(), // Initial screen of your app
+      child: CustomSplashScreen(), // Initial screen of your app
     );
   }
 }
