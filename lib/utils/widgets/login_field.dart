@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginFields extends StatefulWidget {
   const LoginFields({super.key});
@@ -19,28 +20,28 @@ class _LoginFieldsState extends State<LoginFields> {
       children: [
         // Email Label
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.symmetric(horizontal: 20.0.w),
           child: Text(
             "Email Address",
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 16.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'RubikReg',
+              fontFamily: 'RubikMed',
               color: Colors.black,
             ),
           ),
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 10.h),
         // Email Field
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 6),
-            height: 60,
-            width: 371,
+            padding: EdgeInsets.symmetric(horizontal: 8.w),
+            height: 60.h,
+            width: 371.w,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(22),
+              borderRadius: BorderRadius.circular(22.r),
             ),
             child: Center(
               child: TextFormField(
@@ -50,34 +51,36 @@ class _LoginFieldsState extends State<LoginFields> {
                   hintStyle: TextStyle(
                     color: Color(0xff858494).withOpacity(0.7),
                     fontWeight: FontWeight.w600,
+                    fontSize: 16,
+
                     fontFamily: 'RubikReg',
                   ),
                   prefixIcon: Icon(
                     Icons.email_outlined,
                     color: Color(0xff6A5AE0),
-                    size: 26,
+                    size: 26.r,
                   ),
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.symmetric(
-                    vertical: 15,
-                    horizontal: 18,
+                    vertical: 15.h,
+                    horizontal: 18.w,
                   ),
                 ),
-                style: TextStyle(fontSize: 17, fontFamily: 'Rubik'),
+                style: TextStyle(fontSize: 17.sp, fontFamily: 'Rubik'),
               ),
             ),
           ),
         ),
 
-        SizedBox(height: 20),
+        SizedBox(height: 20.h),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.symmetric(horizontal: 20.0.w),
           child: Text(
             "Password",
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 16.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'RubikReg',
+              fontFamily: 'RubikMed',
               color: Colors.black,
             ),
           ),
@@ -85,14 +88,14 @@ class _LoginFieldsState extends State<LoginFields> {
         SizedBox(height: 10),
         // Password Field
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0.w),
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 6),
-            height: 60,
-            width: 371,
+            padding: EdgeInsets.symmetric(horizontal: 6.w),
+            height: 60.h,
+            width: 371.w,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(22),
+              borderRadius: BorderRadius.circular(22.r),
             ),
             child: Center(
               child: TextFormField(
@@ -102,19 +105,20 @@ class _LoginFieldsState extends State<LoginFields> {
                 decoration: InputDecoration(
                   prefixIcon: Icon(
                     Icons.lock_outline,
-                    color: Color(0xff6A5AE0),
-                    size: 26,
+                    color: Color.fromRGBO(106, 90, 224, 1),
+                    size: 26.r,
                   ),
                   hintText: "Your password",
                   hintStyle: TextStyle(
+                    fontSize: 16,
                     color: Color(0xff858494).withOpacity(0.7),
                     fontWeight: FontWeight.w600,
                     fontFamily: 'RubikReg',
                   ),
 
                   contentPadding: EdgeInsets.symmetric(
-                    vertical: 15,
-                    horizontal: 18,
+                    vertical: 15.h,
+                    horizontal: 18.w,
                   ),
                   border: InputBorder.none,
                   suffixIcon: IconButton(
@@ -131,7 +135,7 @@ class _LoginFieldsState extends State<LoginFields> {
                 ),
                 style: TextStyle(
                   fontFamily: 'Rubik',
-                  fontSize: 17,
+                  fontSize: 17.sp,
                   color: Colors.black.withOpacity(0.2),
                 ),
               ),

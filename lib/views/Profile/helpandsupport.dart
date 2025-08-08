@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/utils/widgets/faq_card.dart';
 import 'package:queezy_app/utils/widgets/profile_searchbar.dart';
@@ -14,40 +15,45 @@ class Helpandsupport extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
               Row(
                 children: [
                   IconButton(
                     onPressed: () => Get.back(),
-                    icon: Icon(Icons.arrow_back, size: 30),
+                    icon: Icon(Icons.arrow_back, size: 30.r),
                   ),
-                  const SizedBox(width: 50),
+                  SizedBox(width: 50.w),
                   Text(
                     'Help and Support',
                     style: TextStyle(
                       fontFamily: 'RubikMed',
-                      fontSize: 26,
+                      fontSize: 26.sp,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               Stack(
                 children: [
                   Image.asset(
                     'assets/images/basec.png',
                     fit: BoxFit.fitHeight,
                     width: double.infinity,
-                    height: 710,
+                    height: 710.h,
                   ),
                   Positioned(
-                    top: 30,
-                    left: 0,
-                    right: 0,
+                    top: 30.h,
+                    left: 0.w,
+                    right: 0.w,
                     child: profileSearchBar(),
                   ),
-                  Positioned(top: 130, left: 20, right: 20, child: FAQCard()),
+                  Positioned(
+                    top: 130.h,
+                    left: 20.w,
+                    right: 20.w,
+                    child: FAQCard(),
+                  ),
                 ],
               ),
             ],

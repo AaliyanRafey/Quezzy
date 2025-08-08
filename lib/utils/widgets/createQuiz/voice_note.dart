@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class VoiceNote extends StatelessWidget {
   final TextEditingController controller = TextEditingController();
@@ -7,15 +8,15 @@ class VoiceNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 3.0),
+      padding: EdgeInsets.symmetric(horizontal: 3.0.w),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 6),
-        height: 62,
-        width: 358,
+        padding: EdgeInsets.symmetric(horizontal: 6.w),
+        height: 62.h,
+        width: 358.w,
         decoration: BoxDecoration(
-          border: Border.all(color: Color(0xffEFEEEC), width: 3),
+          border: Border.all(color: Color(0xffEFEEEC), width: 3.w),
           color: Colors.white,
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(22.r),
         ),
         child: TextFormField(
           controller: controller,
@@ -23,10 +24,7 @@ class VoiceNote extends StatelessWidget {
             hintText: "Add voice answer",
             suffixIcon: IconButton(
               onPressed: () {},
-              icon: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.mic_none_outlined, size: 30),
-              ),
+              icon: Icon(Icons.mic_none_outlined, size: 30.r),
             ),
             hintStyle: TextStyle(
               color: Color(0xff858494),
@@ -35,9 +33,12 @@ class VoiceNote extends StatelessWidget {
             ),
 
             border: InputBorder.none,
-            contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 18),
+            contentPadding: EdgeInsets.symmetric(
+              vertical: 15.h,
+              horizontal: 18.w,
+            ),
           ),
-          style: TextStyle(fontSize: 17, fontFamily: 'Rubik'),
+          style: TextStyle(fontSize: 17.sp, fontFamily: 'Rubik'),
         ),
       ),
     );

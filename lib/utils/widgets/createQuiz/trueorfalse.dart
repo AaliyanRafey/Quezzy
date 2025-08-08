@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Trueorfalse extends StatelessWidget {
   const Trueorfalse({super.key});
@@ -12,16 +13,16 @@ class Trueorfalse extends StatelessWidget {
       crossAxisCount: 2,
       mainAxisSpacing: 10,
       crossAxisSpacing: 10,
-      childAspectRatio: 262 / 155,
+      childAspectRatio: 262.w / 155.h,
       children: <Widget>[
         GestureDetector(
           onTap: () {},
           child: Container(
-            height: 102,
-            margin: EdgeInsets.symmetric(horizontal: 5),
-            width: 155,
+            height: 102.h,
+            margin: EdgeInsets.symmetric(horizontal: 5.w),
+            width: 155.w,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
               color: Color(0xffEFEEFC),
             ),
             child: Column(
@@ -31,7 +32,7 @@ class Trueorfalse extends StatelessWidget {
                   onPressed: () {},
                   icon: Icon(Icons.add),
                   color: Color(0XFF6A5AE0),
-                  iconSize: 30,
+                  iconSize: 30.r,
                 ),
                 Text(
                   'Add true answer',
@@ -39,7 +40,7 @@ class Trueorfalse extends StatelessWidget {
                     fontFamily: 'RubikMed',
                     fontWeight: FontWeight.w900,
                     color: Color(0XFF6A5AE0),
-                    fontSize: 16,
+                    fontSize: 16.sp,
                   ),
                 ),
               ],
@@ -49,11 +50,11 @@ class Trueorfalse extends StatelessWidget {
         GestureDetector(
           onTap: () {},
           child: Container(
-            height: 102,
-            margin: EdgeInsets.symmetric(horizontal: 5),
-            width: 155,
+            height: 102.h,
+            margin: EdgeInsets.symmetric(horizontal: 5.w),
+            width: 155.w,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
               color: Color(0xffEFEEFC),
             ),
             child: Column(
@@ -63,7 +64,7 @@ class Trueorfalse extends StatelessWidget {
                   onPressed: () {},
                   icon: Icon(Icons.add),
                   color: Color(0XFF6A5AE0),
-                  iconSize: 30,
+                  iconSize: 30.r,
                 ),
                 Text(
                   'Add false answer',
@@ -71,7 +72,7 @@ class Trueorfalse extends StatelessWidget {
                     fontFamily: 'RubikMed',
                     fontWeight: FontWeight.w900,
                     color: Color(0XFF6A5AE0),
-                    fontSize: 16,
+                    fontSize: 16.sp,
                   ),
                 ),
               ],

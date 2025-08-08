@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CheckBoxOption extends StatelessWidget {
   final String text;
@@ -15,44 +16,40 @@ class CheckBoxOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 3.0.w, vertical: 10.h),
       child: GestureDetector(
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 14),
-          height: 67,
-          width: 398,
+          padding: EdgeInsets.symmetric(horizontal: 14.w),
+          height: 67.h,
+          width: 398.w,
           decoration: BoxDecoration(
-            border: Border.all(color: const Color(0xffEFEEEC), width: 3),
+            border: Border.all(color: const Color(0xffEFEEEC), width: 3.w),
             color: isSelected ? Color(0xffEFEEFC) : Colors.white,
-            borderRadius: BorderRadius.circular(22),
+            borderRadius: BorderRadius.circular(22.r),
           ),
           child: Row(
             children: [
               Container(
-                width: 30,
-                height: 25,
+                width: 30.w,
+                height: 25.h,
                 decoration: BoxDecoration(
                   color: isSelected ? const Color(0XFF6A5AE0) : Colors.white,
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(
                     color: const Color(0xff6A5AE0),
-                    width: 2.5,
+                    width: 2.5.w,
                   ),
                 ),
                 child: isSelected
-                    ? const Icon(
-                        Icons.check,
-                        size: 18,
-                        color: Color(0XFFffffff),
-                      )
+                    ? Icon(Icons.check, size: 18.r, color: Color(0XFFffffff))
                     : null,
               ),
-              const SizedBox(width: 16),
+              SizedBox(width: 16.w),
               Text(
                 text,
                 style: TextStyle(
-                  fontSize: 19,
+                  fontSize: 19.sp,
                   fontFamily: isSelected ? 'RubikMed' : 'RubikReg',
                   fontWeight: FontWeight.w900,
                 ),

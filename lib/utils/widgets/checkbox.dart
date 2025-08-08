@@ -34,6 +34,7 @@ class _CheckBoxScreenState extends State<CheckBoxScreen> {
             });
           },
         ),
+
         CheckBoxOption(
           text: "Sadio Mane",
           isSelected: selected[2],

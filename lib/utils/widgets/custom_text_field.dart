@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
   final int? maxLines;
@@ -29,29 +30,29 @@ class CustomTextField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          padding: EdgeInsets.symmetric(horizontal: 10.0.w),
           child: Text(
             title!,
             style: TextStyle(
-              fontSize: 17.5,
+              fontSize: 17.5.sp,
               fontWeight: FontWeight.w900,
               fontFamily: 'RubikMed',
               color: Color(0xff0C092A),
             ),
           ),
         ),
-        SizedBox(height: 8),
+        SizedBox(height: 8.h),
 
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          padding: EdgeInsets.symmetric(horizontal: 12.w),
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 6),
-            height: 62,
-            width: 356,
+            padding: EdgeInsets.symmetric(horizontal: 6.w),
+            height: 62.h,
+            width: 356.w,
             decoration: BoxDecoration(
               border: Border.all(color: Color(0xffEFEEFC), width: 3),
               color: Colors.white,
-              borderRadius: BorderRadius.circular(22),
+              borderRadius: BorderRadius.circular(22.r),
             ),
             child: Center(
               child: TextFormField(
@@ -68,11 +69,11 @@ class CustomTextField extends StatelessWidget {
 
                   border: InputBorder.none,
                   contentPadding: EdgeInsets.symmetric(
-                    vertical: 15,
-                    horizontal: 20,
+                    vertical: 15.h,
+                    horizontal: 20.w,
                   ),
                 ),
-                style: TextStyle(fontSize: 17, fontFamily: 'Rubik'),
+                style: TextStyle(fontSize: 17.sp, fontFamily: 'Rubik'),
               ),
             ),
           ),

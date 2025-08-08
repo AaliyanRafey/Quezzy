@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
 import 'package:queezy_app/utils/widgets/click_button.dart';
@@ -18,76 +19,76 @@ class _LoginorSignupViewState extends State<LoginorSignupView> {
       body: Stack(
         children: [
           Positioned(
-            height: 106,
-            width: 96,
-            top: 80,
-            left: 160,
+            height: 106.h,
+            width: 96.w,
+            top: 80.h,
+            left: 160.w,
             child: Image.asset('assets/images/logo.png'),
           ),
           Positioned(
-            height: 323,
-            width: 323,
-            top: 166,
-            left: 42,
+            height: 323.h,
+            width: 323.w,
+            top: 166.h,
+            left: 42.w,
             child: Image.asset(
               'assets/images/illus.png',
               fit: BoxFit.fitHeight,
             ),
           ),
           Positioned(
-            height: 20,
-            width: 20,
-            top: 145,
-            left: 346,
+            height: 20.h,
+            width: 20.w,
+            top: 145.h,
+            left: 346.w,
             child: Image.asset('assets/images/oval2.png'),
           ),
           Positioned(
-            height: 49,
-            width: 49,
-            top: 100,
-            left: 34,
+            height: 49.h,
+            width: 49.w,
+            top: 100.h,
+            left: 34.w,
             child: Image.asset('assets/images/oval1.png'),
           ),
           Positioned(
-            height: 418,
-            width: 418,
-            top: 233,
-            left: -115,
+            height: 418.h,
+            width: 418.w,
+            top: 233.h,
+            left: -115.w,
             child: Image.asset('assets/images/oval4.png'),
           ),
           Positioned(
-            height: 14,
-            width: 14,
-            top: 330,
-            left: 155,
+            height: 14.h,
+            width: 14.w,
+            top: 330.h,
+            left: 155.w,
             child: Image.asset('assets/images/oval1.png'),
           ),
           Positioned(
-            height: 129,
-            width: 129,
-            top: 263,
-            left: 322,
+            height: 129.h,
+            width: 129.w,
+            top: 263.h,
+            left: 322.w,
             child: Image.asset('assets/images/oval3.png'),
           ),
           Positioned(
-            height: 240,
-            width: 240,
-            top: 302,
-            left: -76,
+            height: 240.h,
+            width: 240.w,
+            top: 302.h,
+            left: -76.w,
             child: Image.asset('assets/images/oval4a.png'),
           ),
           Positioned(
-            top: 506,
-            left: 15,
+            top: 506.h,
+            left: 15.w,
             child: Container(
-              height: 373,
-              width: 383,
+              height: 373.h,
+              width: 383.w,
               decoration: BoxDecoration(
                 color: Color(0xffFFFFFF),
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(25.r),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: EdgeInsets.all(18.r),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -95,23 +96,23 @@ class _LoginorSignupViewState extends State<LoginorSignupView> {
                       'Login or Sign Up',
                       style: TextStyle(
                         fontFamily: 'RubikMed',
-                        fontSize: 25,
+                        fontSize: 26.sp,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 10.h),
                     Text(
                       'Login or create an account to take quiz,\n     take part in challenge, and more.',
                       style: TextStyle(
                         fontFamily: 'RubikReg',
-                        fontSize: 17,
-                        wordSpacing: 1.5,
+                        fontSize: 19.sp,
+
                         fontWeight: FontWeight.w300,
                         color: Color(0xff858494),
                       ),
                     ),
 
-                    SizedBox(height: 26),
+                    SizedBox(height: 26.h),
                     ClickButton(
                       buttonColor: Color(0xff6A5AE0),
                       textColor: Color(0xffFFFFFF),
@@ -120,7 +121,7 @@ class _LoginorSignupViewState extends State<LoginorSignupView> {
                         Get.toNamed(RoutesName.loginView);
                       },
                     ),
-                    SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     ClickButton(
                       buttonColor: Color(0xffE6E6E6),
                       textColor: Color(0xff6A5AE0),
@@ -129,7 +130,7 @@ class _LoginorSignupViewState extends State<LoginorSignupView> {
                         Get.toNamed(RoutesName.signUp);
                       },
                     ),
-                    SizedBox(height: 16),
+                    SizedBox(height: 16.h),
                     ClickButton(
                       buttonColor: Color(0xffFFFFFF),
                       textColor: Color(0xff858494),

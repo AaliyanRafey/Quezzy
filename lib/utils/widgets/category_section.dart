@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:queezy_app/utils/widgets/category_block.dart';
 
 class CategorySection extends StatelessWidget {
@@ -10,12 +11,12 @@ class CategorySection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 15),
+          padding: EdgeInsets.symmetric(horizontal: 8.0.w, vertical: 15.h),
           child: Text(
             'Categories',
             style: TextStyle(
               fontFamily: 'RubikMed',
-              fontSize: 23.5,
+              fontSize: 25.5.sp,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -23,7 +24,7 @@ class CategorySection extends StatelessWidget {
 
         // Category Blocks
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5.0),
+          padding: EdgeInsets.symmetric(horizontal: 5.0.w),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

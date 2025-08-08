@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FriendsCard extends StatelessWidget {
   final String name;
@@ -21,7 +22,7 @@ class FriendsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 24),
+      padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 24.w),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -29,16 +30,16 @@ class FriendsCard extends StatelessWidget {
           Stack(
             clipBehavior: Clip.none,
             children: [
-              Image.asset(image, fit: BoxFit.cover, height: 65, width: 65),
+              Image.asset(image, fit: BoxFit.cover, height: 65.h, width: 65.w),
 
               Positioned(
-                bottom: -1.5,
-                right: -3,
-                child: Image.asset(flag, width: 20, height: 20),
+                bottom: -1.5.h,
+                right: -3.w,
+                child: Image.asset(flag, width: 20.w, height: 20.h),
               ),
             ],
           ),
-          const SizedBox(width: 26),
+          SizedBox(width: 26.w),
 
           // Name & Points
           Column(
@@ -46,18 +47,18 @@ class FriendsCard extends StatelessWidget {
             children: [
               Text(
                 name,
-                style: const TextStyle(
+                style: TextStyle(
                   fontFamily: 'RubikMed',
-                  fontSize: 19,
+                  fontSize: 19.sp,
                   fontWeight: FontWeight.w800,
                 ),
               ),
-              const SizedBox(height: 4),
+              SizedBox(height: 4.h),
               Text(
                 '$point points',
                 style: TextStyle(
                   fontFamily: 'RubikMed',
-                  fontSize: 16,
+                  fontSize: 16.sp,
                   color: Colors.black.withOpacity(0.4),
                 ),
               ),

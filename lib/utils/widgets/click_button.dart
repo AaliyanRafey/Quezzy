@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ClickButton extends StatelessWidget {
   final Color buttonColor;
@@ -19,8 +20,8 @@ class ClickButton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        height: 58.5,
-        width: 358,
+        height: 58.5.h,
+        width: 358.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: buttonColor,
@@ -31,7 +32,7 @@ class ClickButton extends StatelessWidget {
 
             style: TextStyle(
               fontFamily: 'RubikMed',
-              fontSize: 17,
+              fontSize: 17.5.sp,
               fontWeight: FontWeight.w900,
               color: textColor,
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
 import 'package:queezy_app/utils/widgets/click_button.dart';
@@ -24,20 +25,20 @@ class _ResetPassEmailViewState extends State<ResetPassEmailView> {
             //    APPBAR
             //----------
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+              padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 30.h),
               child: Row(
-                spacing: 40,
+                spacing: 40.w,
                 children: [
                   IconButton(
                     onPressed: () {
                       Get.offAndToNamed(RoutesName.loginView);
                     },
-                    icon: Icon(Icons.arrow_back, size: 30),
+                    icon: Icon(Icons.arrow_back, size: 30.r),
                   ),
                   Text(
                     'Reset Password',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 30.sp,
                       fontFamily: 'RubikReg',
                       fontWeight: FontWeight.w900,
                     ),
@@ -47,13 +48,13 @@ class _ResetPassEmailViewState extends State<ResetPassEmailView> {
             ),
 
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              padding: EdgeInsets.symmetric(horizontal: 24.sp),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Enter your email and we will send you a link\nto reset your password',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     wordSpacing: 1,
                     color: Colors.black.withOpacity(0.4),
                     fontFamily: 'RubikReg',
@@ -63,15 +64,15 @@ class _ResetPassEmailViewState extends State<ResetPassEmailView> {
                 ),
               ),
             ),
-            SizedBox(height: 42),
+            SizedBox(height: 42.h),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 22.0),
+              padding: EdgeInsets.symmetric(horizontal: 22.w),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Email Address",
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.w900,
                     fontFamily: 'RubikReg',
                     color: Colors.black,
@@ -79,17 +80,17 @@ class _ResetPassEmailViewState extends State<ResetPassEmailView> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 10.h),
             // Email Field
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 6),
-                height: 60,
-                width: 371,
+                padding: EdgeInsets.symmetric(horizontal: 6.w),
+                height: 60.h,
+                width: 371.w,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(22),
+                  borderRadius: BorderRadius.circular(22.r),
                 ),
                 child: Center(
                   child: TextFormField(
@@ -97,7 +98,9 @@ class _ResetPassEmailViewState extends State<ResetPassEmailView> {
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       hintText: "Your email address",
+                      floatingLabelBehavior: FloatingLabelBehavior.never,
                       hintStyle: TextStyle(
+                        fontSize: 16,
                         fontFamily: 'RubikReg',
                         fontWeight: FontWeight.w900,
                         color: Color(0xff000000).withOpacity(0.4),
@@ -105,21 +108,21 @@ class _ResetPassEmailViewState extends State<ResetPassEmailView> {
                       prefixIcon: Icon(
                         Icons.email_outlined,
                         color: Color(0xff6A5AE0),
-                        size: 30,
+                        size: 30.r,
                       ),
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.symmetric(
-                        vertical: 15,
-                        horizontal: 18,
+                        vertical: 15.h,
+                        horizontal: 18.w,
                       ),
                     ),
-                    style: TextStyle(fontSize: 17, fontFamily: 'Rubik'),
+                    style: TextStyle(fontSize: 17.sp, fontFamily: 'Rubik'),
                   ),
                 ),
               ),
             ),
 
-            SizedBox(height: 160),
+            SizedBox(height: 160.h),
 
             /// -----------
             /// lOGIN bUTTON

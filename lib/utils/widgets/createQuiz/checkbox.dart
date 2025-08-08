@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Checkboxs extends StatelessWidget {
   final TextEditingController controller = TextEditingController();
@@ -7,33 +8,37 @@ class Checkboxs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [_buildAnswerBox(), SizedBox(height: 10), _buildAnswerBox()],
+      children: [
+        _buildAnswerBox(),
+        SizedBox(height: 10.h),
+        _buildAnswerBox(),
+      ],
     );
   }
 
   Widget _buildAnswerBox() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 3.0),
+      padding: EdgeInsets.symmetric(horizontal: 3.0.w),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 6),
-        height: 62,
-        width: 358,
+        padding: EdgeInsets.symmetric(horizontal: 6.w),
+        height: 62.h,
+        width: 358.w,
         decoration: BoxDecoration(
-          border: Border.all(color: Color(0xffEFEEEC), width: 3),
+          border: Border.all(color: Color(0xffEFEEEC), width: 3.w),
           color: Colors.white,
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(22.r),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          padding: EdgeInsets.symmetric(horizontal: 12.w),
           child: Row(
             children: [
               Container(
-                width: 30,
-                height: 25,
+                width: 30.w,
+                height: 25.h,
                 decoration: BoxDecoration(
                   color: Color(0xffEFEEFC),
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Color(0xff6A5AE0), width: 2.5),
+                  borderRadius: BorderRadius.circular(8.r),
+                  border: Border.all(color: Color(0xff6A5AE0), width: 2.5.w),
                 ),
               ),
               Expanded(
@@ -48,11 +53,11 @@ class Checkboxs extends StatelessWidget {
                     ),
                     border: InputBorder.none,
                     contentPadding: EdgeInsets.symmetric(
-                      vertical: 15,
-                      horizontal: 18,
+                      vertical: 15.h,
+                      horizontal: 18.w,
                     ),
                   ),
-                  style: TextStyle(fontSize: 17, fontFamily: 'Rubik'),
+                  style: TextStyle(fontSize: 17.sp, fontFamily: 'Rubik'),
                 ),
               ),
             ],

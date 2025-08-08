@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Puzzle extends StatefulWidget {
   const Puzzle({super.key});
@@ -25,17 +26,17 @@ class _PuzzleState extends State<Puzzle> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250,
+      height: 250.h,
       child: ListView.builder(
         itemCount: _controllers.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8),
+            padding: EdgeInsets.symmetric(horizontal: 12.0.w, vertical: 8.h),
             child: Row(
               children: [
                 Expanded(child: _buildTextField(_controllers[index])),
-                const SizedBox(width: 10),
-                const Icon(Icons.drag_handle_rounded, size: 35),
+                SizedBox(width: 10.w),
+                Icon(Icons.drag_handle_rounded, size: 35.r),
               ],
             ),
           );
@@ -46,15 +47,15 @@ class _PuzzleState extends State<Puzzle> {
 
   Container _buildTextField(TextEditingController controller) {
     return Container(
-      height: 62,
+      height: 62.h,
       decoration: BoxDecoration(
-        border: Border.all(color: const Color(0xffEFEEEC), width: 3),
+        border: Border.all(color: const Color(0xffEFEEEC), width: 3.w),
         color: Colors.white,
-        borderRadius: BorderRadius.circular(22),
+        borderRadius: BorderRadius.circular(22.r),
       ),
       child: TextFormField(
         controller: controller,
-        decoration: const InputDecoration(
+        decoration: InputDecoration(
           hintText: "Add answer",
           hintStyle: TextStyle(
             color: Color(0xff858494),
@@ -62,9 +63,12 @@ class _PuzzleState extends State<Puzzle> {
             fontFamily: 'RubikReg',
           ),
           border: InputBorder.none,
-          contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 18),
+          contentPadding: EdgeInsets.symmetric(
+            vertical: 15.h,
+            horizontal: 18.w,
+          ),
         ),
-        style: const TextStyle(fontSize: 17, fontFamily: 'Rubik'),
+        style: TextStyle(fontSize: 17.sp, fontFamily: 'Rubik'),
       ),
     );
   }

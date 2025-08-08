@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:queezy_app/view_model/question_item_model.dart';
 
 class QuestionRow extends StatelessWidget {
@@ -9,11 +10,11 @@ class QuestionRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
-      spacing: 18,
+      spacing: 18.w,
       children: [
         Container(
-          height: 30,
-          width: 30,
+          height: 30.h,
+          width: 30.w,
           decoration: BoxDecoration(
             color: Colors.white,
             shape: BoxShape.circle,
@@ -22,7 +23,7 @@ class QuestionRow extends StatelessWidget {
             child: Text(
               item.qno,
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 16.sp,
                 fontFamily: 'RubikReg',
                 fontWeight: FontWeight.w600,
                 color: Color(0xff6A5AE0),
@@ -36,7 +37,7 @@ class QuestionRow extends StatelessWidget {
             style: TextStyle(
               fontFamily: 'RubikMed',
               fontWeight: FontWeight.w700,
-              fontSize: 17,
+              fontSize: 16.sp,
               color: Colors.black,
             ),
             children: [
@@ -45,7 +46,7 @@ class QuestionRow extends StatelessWidget {
               TextSpan(
                 text: item.subText,
                 style: TextStyle(
-                  fontSize: 13.5,
+                  fontSize: 13.5.sp,
                   fontWeight: FontWeight.w700,
                   fontFamily: 'RubikReg',
                   color: Color(0xff858494),

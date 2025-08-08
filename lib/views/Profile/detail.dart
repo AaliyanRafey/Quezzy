@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Detail extends StatelessWidget {
   const Detail({super.key});
@@ -8,16 +9,16 @@ class Detail extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 365,
-          height: 300,
+          width: 365.w,
+          height: 300.h,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.r),
             color: Color(0xffefeefc),
           ),
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: EdgeInsets.all(12.0.r),
                 child: Column(
                   children: [
                     Row(
@@ -27,43 +28,39 @@ class Detail extends StatelessWidget {
                           'Recent matches',
                           style: TextStyle(
                             fontFamily: 'RubikMed',
-                            fontSize: 24,
+                            fontSize: 24.sp,
                             fontWeight: FontWeight.w900,
                           ),
                         ),
                         Container(
-                          height: 42,
-                          width: 100,
+                          height: 42.h,
+                          width: 94.w,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(
                               color: Color(0xffefeefc),
-                              width: 2.5,
+                              width: 2.5.w,
                             ),
-                            borderRadius: BorderRadius.circular(24),
+                            borderRadius: BorderRadius.circular(24.r),
                           ),
-                          child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 8.0,
-                              ),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    'Monthly',
-                                    style: TextStyle(
-                                      fontFamily: 'RubikReg',
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: 14,
-                                    ),
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'Monthly',
+                                  style: TextStyle(
+                                    fontFamily: 'RubikMed',
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: 13.sp,
                                   ),
-                                  Icon(
-                                    Icons.arrow_drop_down,
-                                    color: Color(0xff6A5AE0),
-                                    size: 20,
-                                  ),
-                                ],
-                              ),
+                                ),
+                                Icon(
+                                  Icons.arrow_drop_down,
+                                  color: Color(0xff6A5AE0),
+                                  size: 20.r,
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -75,21 +72,21 @@ class Detail extends StatelessWidget {
                         Image.asset(
                           'assets/images/d1.png',
                           fit: BoxFit.fitWidth,
-                          height: 100,
-                          width: 300,
+                          height: 100.h,
+                          width: 300.w,
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 20.h),
                         Container(
-                          height: 2,
-                          width: 300,
+                          height: 2.h,
+                          width: 300.w,
                           color: Color(0xffD9D4F7),
                         ),
-                        SizedBox(height: 3),
+                        SizedBox(height: 3.h),
                         Image.asset(
                           'assets/images/d2.png',
                           fit: BoxFit.fitWidth,
-                          height: 100,
-                          width: 300,
+                          height: 100.h,
+                          width: 300.w,
                         ),
                       ],
                     ),
@@ -99,7 +96,7 @@ class Detail extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 300),
+        SizedBox(height: 300.h),
       ],
     );
   }

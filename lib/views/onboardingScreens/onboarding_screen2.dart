@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
 import 'package:queezy_app/utils/widgets/click_button.dart';
@@ -13,25 +15,25 @@ class OnboardingScreen2 extends StatelessWidget {
       body: Stack(
         children: [
           Positioned(
-            height: 241.65625,
-            width: 241.65625,
-            top: -51.09,
-            left: 247.91,
+            height: 241.65625.h,
+            width: 241.65625.w,
+            top: -51.09.h,
+            left: 247.91.w,
             child: Image.asset('assets/images/oval3b.png'),
           ),
 
           Positioned(
-            height: 418,
-            width: 418,
-            top: -86,
-            left: 103,
+            height: 418.h,
+            width: 418.w,
+            top: -86.h,
+            left: 103.w,
             child: Image.asset('assets/images/oval3a.png'),
           ),
           Positioned(
-            height: 48,
-            width: 48,
-            top: 136,
-            left: 82,
+            height: 48.h,
+            width: 48.w,
+            top: 136.h,
+            left: 82.w,
             child: Image.asset('assets/images/oval1.png'),
           ),
           // Positioned(
@@ -42,53 +44,53 @@ class OnboardingScreen2 extends StatelessWidget {
           //   child: Image.asset('assets/images/oval2.png'),
           // ),
           Positioned(
-            height: 20,
-            width: 20,
-            top: 460,
-            left: 323,
+            height: 20.h,
+            width: 20.w,
+            top: 460.h,
+            left: 323.w,
             child: Image.asset('assets/images/oval2.png'),
           ),
           Positioned(
-            height: 418,
-            width: 418,
-            top: 122,
-            left: 18,
+            height: 418.h,
+            width: 418.w,
+            top: 122.h,
+            left: 18.w,
             child: Image.asset('assets/images/b2.png'),
           ),
 
           Positioned(
-            height: 428,
-            width: 428,
-            top: 350,
-            left: -90,
+            height: 428.h,
+            width: 428.w,
+            top: 350.h,
+            left: -100.w,
             child: Image.asset('assets/images/onb1.png'),
           ),
           Positioned(
-            top: 582,
-            left: 175,
+            top: 582.h,
+            left: 175.w,
             child: Row(
-              spacing: 15,
+              spacing: 15.w,
               children: [
                 Container(
-                  height: 9,
-                  width: 9,
+                  height: 9.h,
+                  width: 9.w,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color(0xffFFFFFF),
                   ),
                 ),
                 Container(
-                  height: 16,
-                  width: 16,
+                  height: 16.h,
+                  width: 16.w,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: Color(0xffFFFFFF), width: 2),
+                    border: Border.all(color: Color(0xffFFFFFF), width: 2.w),
                   ),
                   child: Align(
                     alignment: Alignment.center, // You can change this!
                     child: Container(
-                      height: 7.5, // As per your requirement
-                      width: 7.5,
+                      height: 7.5.h, // As per your requirement
+                      width: 7.5.w,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Color(0xffFFFFFF),
@@ -97,8 +99,8 @@ class OnboardingScreen2 extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: 9,
-                  width: 9,
+                  height: 9.h,
+                  width: 9.w,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color(0xffFFFFFF),
@@ -109,28 +111,28 @@ class OnboardingScreen2 extends StatelessWidget {
           ),
 
           Positioned(
-            top: 625,
-            left: 15,
+            top: 625.h,
+            left: 15.w,
             child: Container(
-              height: 264,
-              width: 383,
+              height: 264.h,
+              width: 383.w,
               decoration: BoxDecoration(
                 color: Color(0xffFFFFFF),
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(25.h),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   Text(
                     'Find quizzes to test out\n       your knowledge',
                     style: TextStyle(
                       fontFamily: 'RubikMed',
-                      fontSize: 27,
+                      fontSize: 27.sp,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
-                  SizedBox(height: 35),
+                  SizedBox(height: 35.h),
 
                   ClickButton(
                     buttonColor: Color(0xff6A5AE0),
@@ -140,30 +142,34 @@ class OnboardingScreen2 extends StatelessWidget {
                       Get.toNamed(RoutesName.loginorsignup);
                     },
                   ),
+                  SizedBox(height: 30.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
-                        'Already have an account?',
-                        style: TextStyle(
-                          fontFamily: 'RubikReg',
-                          fontWeight: FontWeight.w900,
-                          fontSize: 16,
-                          color: Color(0xff858494),
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          Get.toNamed(RoutesName.loginView);
-                        },
-                        child: Text(
-                          'Login',
+                      RichText(
+                        text: TextSpan(
                           style: TextStyle(
-                            fontFamily: 'RubikBold',
-                            fontSize: 16,
-                            color: Color(0xff6A5AE0),
+                            fontFamily: 'RubikReg',
+                            fontSize: 16.sp,
+                            color: Color(0xff858494),
                           ),
+                          children: [
+                            TextSpan(text: 'Already have an account? '),
+                            TextSpan(
+                              text: 'Login',
+                              style: TextStyle(
+                                fontFamily: 'RubikBold',
+                                fontSize: 16.sp,
+                                color: Color(0xff6A5AE0),
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  // 👇 Navigate to Login screen here
+                                  Get.toNamed(RoutesName.loginView);
+                                },
+                            ),
+                          ],
                         ),
                       ),
                     ],

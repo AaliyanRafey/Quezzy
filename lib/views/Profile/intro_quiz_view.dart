@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class IntroQuizView extends StatelessWidget {
@@ -12,32 +13,32 @@ class IntroQuizView extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
               Row(
                 children: [
                   IconButton(
                     onPressed: () => Get.back(),
-                    icon: Icon(Icons.arrow_back, size: 30),
+                    icon: Icon(Icons.arrow_back, size: 30.r),
                   ),
-                  const SizedBox(width: 50),
+                  SizedBox(width: 50.w),
                   Text(
                     'Help and Support',
                     style: TextStyle(
                       fontFamily: 'RubikMed',
-                      fontSize: 26,
+                      fontSize: 26.sp,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 30),
+              SizedBox(height: 30.h),
               Stack(
                 children: [
                   Image.asset(
                     'assets/images/i.png',
                     fit: BoxFit.fitHeight,
                     width: double.infinity,
-                    height: 780,
+                    height: 780.h,
                   ),
                 ],
               ),

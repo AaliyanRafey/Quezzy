@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BadgeView extends StatelessWidget {
   final List badges = [
@@ -14,7 +15,7 @@ class BadgeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 500,
+      height: 500.h,
       child: GridView.builder(
         shrinkWrap: true, // ✅ Important!
         physics: ScrollPhysics(), // ✅ Prevents nested scroll conflict
@@ -23,15 +24,15 @@ class BadgeView extends StatelessWidget {
           crossAxisCount: 3,
           mainAxisSpacing: 8,
           crossAxisSpacing: 8,
-          childAspectRatio: 50 / 50,
+          childAspectRatio: 50.w / 50.h,
         ),
         itemBuilder: (BuildContext context, int index) {
           return Image.asset(
             badges[index],
             fit: BoxFit.cover,
             filterQuality: FilterQuality.high,
-            height: 50,
-            width: 50,
+            height: 50.h,
+            width: 50.w,
           );
         },
       ),

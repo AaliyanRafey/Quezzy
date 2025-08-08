@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/view_model/controller/quiz_controller.dart';
 
@@ -17,9 +18,9 @@ class QuestionStepper extends StatelessWidget {
             return GestureDetector(
               onTap: () => controller.changeQuestion(index),
               child: Container(
-                width: 35, // 👈 Circle width
-                height: 35, //
-                margin: EdgeInsets.symmetric(horizontal: 6.5),
+                width: 35.w, // 👈 Circle width
+                height: 35.h, //
+                margin: EdgeInsets.symmetric(horizontal: 6.5.w),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: isSelected ? Colors.black : Colors.transparent,
@@ -30,7 +31,7 @@ class QuestionStepper extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
                       fontFamily: isSelected ? 'RubikMed' : 'RubikReg',
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       color: isSelected ? Color(0xffFFFFFF) : Color(0xff858494),
                     ),
                   ),

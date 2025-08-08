@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget topRankCard() {
   return Stack(
@@ -6,34 +7,34 @@ Widget topRankCard() {
     children: [
       // Blue container (main card)
       Container(
-        margin: EdgeInsets.symmetric(horizontal: 3),
-        height: 105,
+        margin: EdgeInsets.symmetric(horizontal: 3.w),
+        height: 105.h,
         width: double.infinity,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(20.r),
           color: Color(0xff6A5AE0),
         ),
         child: Stack(
           children: [
             // Rank number circle
             Positioned(
-              top: 36,
-              left: 17,
+              top: 36.h,
+              left: 17.w,
               child: Container(
-                height: 30,
-                width: 30,
+                height: 30.h,
+                width: 30.w,
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Color(0xffefeefc).withOpacity(0.3),
-                    width: 2,
+                    width: 2.w,
                   ),
                   shape: BoxShape.circle,
                 ),
-                child: const Center(
+                child: Center(
                   child: Text(
                     '1',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 18.sp,
                       fontFamily: 'RubikReg',
                       fontWeight: FontWeight.w600,
                       color: Colors.white,
@@ -44,61 +45,61 @@ Widget topRankCard() {
             ),
             // Avatar
             Positioned(
-              top: 14,
-              left: 65,
+              top: 14.h,
+              left: 65.w,
               child: Image.asset(
                 'assets/images/a4.png',
                 fit: BoxFit.contain,
-                height: 65,
-                width: 65,
+                height: 65.h,
+                width: 65.w,
               ),
             ),
             // Flag
             Positioned(
-              top: 65,
-              left: 114,
+              top: 65.h,
+              left: 110.w,
               child: Image.asset(
                 'assets/images/cz.png',
                 fit: BoxFit.contain,
-                height: 20,
-                width: 20,
+                height: 20.h,
+                width: 20.w,
               ),
             ),
             // Top wave
             Positioned(
-              top: -20,
-              left: 135,
+              top: -20.h,
+              left: 135.w,
               child: Image.asset(
                 'assets/images/toprankwave.png',
                 fit: BoxFit.fitHeight,
-                height: 129,
-                width: 375.5,
+                height: 129.h,
+                width: 375.5.w,
               ),
             ),
             // Name
-            const Positioned(
-              top: 22,
-              left: 148,
+            Positioned(
+              top: 22.h,
+              left: 148.w,
               child: Text(
                 'Brandon Matrovs',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'RubikMed',
-                  fontSize: 18,
+                  fontSize: 21.sp,
                   fontWeight: FontWeight.w900,
                 ),
               ),
             ),
             // Points
-            const Positioned(
-              top: 55,
-              left: 149,
+            Positioned(
+              top: 55.h,
+              left: 149.w,
               child: Text(
                 '124 points',
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'RubikReg',
-                  fontSize: 16.5,
+                  fontSize: 15.5.sp,
                   fontWeight: FontWeight.w300,
                 ),
               ),
@@ -109,13 +110,13 @@ Widget topRankCard() {
 
       // Gold medal on top (half out)
       Positioned(
-        top: -18,
-        right: 30,
+        top: -18.h,
+        right: 30.w,
         child: Image.asset(
           'assets/images/goldmedal.png',
           fit: BoxFit.cover,
-          height: 45,
-          width: 45,
+          height: 45.h,
+          width: 45.w,
         ),
       ),
     ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class PieCountdown extends StatefulWidget {
@@ -9,7 +10,7 @@ class PieCountdown extends StatefulWidget {
   const PieCountdown({
     super.key,
     this.seconds = 10,
-    this.size = 64,
+    this.size = 74,
     required this.nextScreen,
   });
 
@@ -47,8 +48,8 @@ class _PieCountdownState extends State<PieCountdown>
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: widget.size,
-      width: widget.size,
+      height: widget.size.h,
+      width: widget.size.w,
 
       child: AnimatedBuilder(
         animation: _controller,
@@ -63,7 +64,7 @@ class _PieCountdownState extends State<PieCountdown>
               Text(
                 '$timeLeft',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 24.sp,
                   fontFamily: 'RubikMed',
                   fontWeight: FontWeight.w900,
                   color: Colors.white,

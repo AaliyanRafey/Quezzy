@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:get/get.dart';
 import 'package:queezy_app/utils/widgets/search%20widgets/category_card.dart';
 import 'package:queezy_app/view_model/controller/searchBarController.dart';
@@ -17,26 +19,26 @@ class CategorySection extends StatelessWidget {
       children: [
         // 🔹 Heading Row
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 15),
+          padding: EdgeInsets.symmetric(horizontal: 28.w, vertical: 15.h),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
+              Text(
                 'Categories',
                 style: TextStyle(
                   fontFamily: 'RubikMed',
-                  fontSize: 20,
+                  fontSize: 20.sp,
                   fontWeight: FontWeight.w900,
                 ),
               ),
               TextButton(
                 onPressed: () {},
-                child: const Text(
+                child: Text(
                   'See all',
                   style: TextStyle(
                     fontFamily: 'RubikMed',
                     color: Color(0xff6A5AE0),
-                    fontSize: 14,
+                    fontSize: 14.sp,
                   ),
                 ),
               ),
@@ -46,15 +48,15 @@ class CategorySection extends StatelessWidget {
 
         // 🔹 Category Grid
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
+          padding: EdgeInsets.symmetric(horizontal: 35.w),
           child: GridView.builder(
             itemCount: categories.length,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              crossAxisSpacing: 12,
-              mainAxisSpacing: 12,
+              crossAxisSpacing: 6,
+              mainAxisSpacing: 6,
               childAspectRatio: 1,
             ),
             itemBuilder: (context, index) {

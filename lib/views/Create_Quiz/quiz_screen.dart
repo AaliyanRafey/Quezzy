@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
 import 'package:queezy_app/utils/extensions/questiontype_extension.dart';
@@ -30,7 +31,7 @@ class QuizScreen extends StatelessWidget {
           children: [
             SingleChildScrollView(
               padding: EdgeInsets.only(
-                bottom: 100,
+                bottom: 100.h,
               ), // 👈 enough space for button
               physics: ScrollPhysics(),
               child: Column(
@@ -38,12 +39,12 @@ class QuizScreen extends StatelessWidget {
                   // above bar
                   // arorow, create quiz, three dots
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 8.0,
-                      vertical: 6,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 8.0.w,
+                      vertical: 6.h,
                     ),
                     child: Row(
-                      spacing: 72,
+                      spacing: 72.w,
                       children: [
                         IconButton(
                           onPressed: () {
@@ -52,14 +53,14 @@ class QuizScreen extends StatelessWidget {
                           icon: Icon(
                             Icons.arrow_back,
                             color: Colors.white,
-                            size: 30,
+                            size: 30.r,
                           ),
                         ),
                         Text(
                           'Create Quiz',
                           style: TextStyle(
                             fontFamily: 'RubikMed',
-                            fontSize: 25,
+                            fontSize: 25.sp,
                             color: Colors.white,
                             fontWeight: FontWeight.w600,
                           ),
@@ -69,62 +70,62 @@ class QuizScreen extends StatelessWidget {
                           icon: Icon(
                             Icons.more_horiz_rounded,
                             color: Color(0xffFFFFFF),
-                            size: 30,
+                            size: 30.r,
                           ),
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(height: 7),
+                  SizedBox(height: 7.h),
 
                   Container(
-                    height: 769,
+                    height: 769.h,
                     width: double.infinity,
-                    margin: EdgeInsets.symmetric(horizontal: 8),
-                    padding: EdgeInsets.symmetric(horizontal: 6),
+                    margin: EdgeInsets.symmetric(horizontal: 8.w),
+                    padding: EdgeInsets.symmetric(horizontal: 6.w),
                     decoration: BoxDecoration(
                       color: Color(0xffFFFFFF),
-                      borderRadius: BorderRadius.circular(32),
+                      borderRadius: BorderRadius.circular(32.r),
                     ),
                     child: Column(
                       children: [
-                        SizedBox(height: 15),
+                        SizedBox(height: 15.h),
                         QuestionStepper(),
-                        SizedBox(height: 10),
+                        SizedBox(height: 10.h),
                         coverImage(),
                         Padding(
-                          padding: const EdgeInsets.all(10.0),
+                          padding: EdgeInsets.all(10.0.r),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Container(
-                                height: 38,
-                                width: 90,
+                                height: 38.h,
+                                width: 90.w,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
                                   border: Border.all(
                                     color: Color(0xffefeefc),
-                                    width: 2.5,
+                                    width: 2.5.w,
                                   ),
-                                  borderRadius: BorderRadius.circular(14),
+                                  borderRadius: BorderRadius.circular(14.r),
                                 ),
                                 child: Center(
                                   child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 3.0,
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 3.0.w,
                                     ),
                                     child: Row(
-                                      spacing: 3,
+                                      spacing: 3.w,
                                       children: [
                                         Icon(
                                           Icons.access_time,
                                           color: Color(0xff6A5AE0),
-                                          size: 22,
+                                          size: 22.r,
                                         ),
                                         Text(
                                           '20 Sec',
                                           style: TextStyle(
-                                            fontSize: 14,
+                                            fontSize: 14.sp,
                                             fontFamily: 'RubikReg',
                                             fontWeight: FontWeight.w900,
                                           ),
@@ -136,24 +137,24 @@ class QuizScreen extends StatelessWidget {
                               ),
                               Obx(
                                 () => Container(
-                                  height: 42,
-                                  width: 150,
+                                  height: 42.h,
+                                  width: 150.w,
                                   decoration: BoxDecoration(
                                     color: Colors.white,
                                     border: Border.all(
                                       color: Color(0xffefeefc),
-                                      width: 2.5,
+                                      width: 2.5.w,
                                     ),
-                                    borderRadius: BorderRadius.circular(14),
+                                    borderRadius: BorderRadius.circular(14.r),
                                   ),
                                   child: Center(
                                     child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 2.0,
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 2.0.w,
                                       ),
                                       child: DropdownButtonHideUnderline(
                                         child: Padding(
-                                          padding: const EdgeInsets.all(2.0),
+                                          padding: EdgeInsets.all(2.0.r),
                                           child: DropdownButton<Questiontype>(
                                             value: quizController
                                                 .selectedQuestionType
@@ -172,7 +173,7 @@ class QuizScreen extends StatelessWidget {
                                                 child: Text(
                                                   type.label, // Dart >= 2.17 supports `.name`
                                                   style: TextStyle(
-                                                    fontSize: 14,
+                                                    fontSize: 14.sp,
                                                     fontFamily: 'RubikReg',
 
                                                     fontWeight: FontWeight.w900,
@@ -196,17 +197,17 @@ class QuizScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(height: 5),
+                        SizedBox(height: 5.h),
 
                         CustomTextField(
                           title: 'Add Question',
                           hintText: 'Enter your question',
 
                           controller: controller,
-                          height: 62,
-                          width: 371,
+                          height: 62.h,
+                          width: 371.w,
                         ),
-                        SizedBox(height: 15),
+                        SizedBox(height: 15.h),
                         Obx(() {
                           switch (quizController.selectedQuestionType.value) {
                             case Questiontype.multipleAnswer:
@@ -232,10 +233,10 @@ class QuizScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 760,
-              left: 20,
+              top: 760.h,
+              left: 20.w,
               child: Padding(
-                padding: const EdgeInsets.only(left: 8.0),
+                padding: EdgeInsets.only(left: 8.0.w),
                 child: ClickButton(
                   buttonColor: Color(0xff6A5AE0),
                   textColor: Color(0xffffffff),

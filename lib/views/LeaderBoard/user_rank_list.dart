@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:queezy_app/utils/widgets/user_rank.dart';
 
 class UserRankList extends StatelessWidget {
@@ -39,36 +40,28 @@ class UserRankList extends StatelessWidget {
       'points': '448 pts',
       'image': 'assets/images/avatar6.png',
     },
-    {
-      'no': '7',
-      'name': 'Skylar Geidt',
-      'points': '448 points',
-      'image': 'assets/images/avatar6.png',
-    },
   ];
   UserRankList({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: ListView.builder(
-        shrinkWrap: true,
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-        itemCount: users.length,
-        physics: const NeverScrollableScrollPhysics(),
-        itemBuilder: (context, index) {
-          final user = users[index];
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 6),
-            child: UserRank(
-              no: user['no']!,
-              name: user['name']!,
-              points: user['points']!,
-              image: user['image']!,
-            ),
-          );
-        },
-      ),
+    return ListView.builder(
+      shrinkWrap: true,
+      padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
+      itemCount: users.length,
+      physics: const NeverScrollableScrollPhysics(),
+      itemBuilder: (context, index) {
+        final user = users[index];
+        return Padding(
+          padding: EdgeInsets.symmetric(vertical: 6.w),
+          child: UserRank(
+            no: user['no']!,
+            name: user['name']!,
+            points: user['points']!,
+            image: user['image']!,
+          ),
+        );
+      },
     );
   }
 }

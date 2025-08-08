@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TypeAnswer extends StatelessWidget {
   final TextEditingController controller = TextEditingController();
@@ -7,15 +8,15 @@ class TypeAnswer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5.0),
+      padding: EdgeInsets.symmetric(horizontal: 5.w),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 6),
-        height: 102,
-        width: 360,
+        padding: EdgeInsets.symmetric(horizontal: 6.w),
+        height: 102.h,
+        width: 360.w,
         decoration: BoxDecoration(
-          border: Border.all(color: Color(0xffEFEEFC), width: 3),
+          border: Border.all(color: Color(0xffEFEEFC), width: 3.w),
           color: Colors.white,
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(22.r),
         ),
         child: Align(
           alignment: Alignment.topLeft,
@@ -31,11 +32,11 @@ class TypeAnswer extends StatelessWidget {
 
               border: InputBorder.none,
               contentPadding: EdgeInsets.symmetric(
-                vertical: 15,
-                horizontal: 18,
+                vertical: 15.h,
+                horizontal: 18.w,
               ),
             ),
-            style: TextStyle(fontSize: 17, fontFamily: 'Rubik'),
+            style: TextStyle(fontSize: 17.sp, fontFamily: 'Rubik'),
           ),
         ),
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/get_core.dart';
 import 'package:queezy_app/views/Profile/intro_quiz_view.dart';
 
 class FAQCard extends StatelessWidget {
@@ -11,47 +11,47 @@ class FAQCard extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(), // Let parent scroll
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(16.r),
       children: [
         // Section 1 Title
-        const Text(
+        Text(
           'INTRO',
           style: TextStyle(
-            fontSize: 16,
+            fontSize: 16.sp,
             color: Color(0xff858494),
             fontFamily: 'RubikMed',
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 10),
+        SizedBox(height: 10.h),
 
         // Section 1 Items
         _faqItem('Intro to Queezy apps'),
-        const SizedBox(height: 10),
+        SizedBox(height: 10.h),
         _faqItem('How to login or sign up'),
 
-        const SizedBox(height: 30),
+        SizedBox(height: 30.h),
 
         // Section 2 Title
-        const Text(
+        Text(
           'CREATE AND TAKE QUIZ',
           style: TextStyle(
-            fontSize: 16,
+            fontSize: 16.sp,
             color: Color(0xff858494),
             fontFamily: 'RubikMed',
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 10),
+        SizedBox(height: 10.h),
 
         // Section 2 Items
         _faqItem('How to create quiz in the app'),
-        const SizedBox(height: 5),
+        SizedBox(height: 5.h),
         _faqItem('How to take quiz in the app'),
-        const SizedBox(height: 5),
+        SizedBox(height: 5.h),
         _faqItem('How do I play quiz with other players?'),
 
-        const SizedBox(height: 5),
+        SizedBox(height: 5.h),
         _faqItem('Can I invite my friends to play quiz together?'),
       ],
     );
@@ -59,7 +59,7 @@ class FAQCard extends StatelessWidget {
 
   Widget _faqItem(String text) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: EdgeInsets.symmetric(vertical: 8.0.h),
       child: TextButton(
         onPressed: () {
           Get.to(IntroQuizView());
@@ -68,8 +68,8 @@ class FAQCard extends StatelessWidget {
           alignment: Alignment.topLeft,
           child: Text(
             text,
-            style: const TextStyle(
-              fontSize: 18,
+            style: TextStyle(
+              fontSize: 18.sp,
               fontFamily: 'RubikMed',
               fontWeight: FontWeight.w700,
               color: Colors.black,

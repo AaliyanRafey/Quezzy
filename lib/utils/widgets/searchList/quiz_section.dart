@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/utils/widgets/search%20widgets/quizCard.dart';
 import 'package:queezy_app/view_model/controller/searchBarController.dart';
@@ -18,25 +19,25 @@ class Quizsection extends StatelessWidget {
         children: [
           // 🔹 Section Header
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
+            padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 5.h),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   'Quiz',
                   style: TextStyle(
                     fontFamily: 'RubiKMed',
-                    fontSize: 24.5,
+                    fontSize: 24.5.sp,
                     fontWeight: FontWeight.w900,
                   ),
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: const Text(
+                  child: Text(
                     'See all',
                     style: TextStyle(
                       fontFamily: 'RubikMed',
-                      fontSize: 17,
+                      fontSize: 17.sp,
                       color: Color(0xff6A5AE0),
                     ),
                   ),

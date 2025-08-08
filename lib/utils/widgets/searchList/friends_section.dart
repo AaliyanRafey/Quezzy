@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/utils/widgets/search%20widgets/friends_Card.dart';
 import 'package:queezy_app/view_model/controller/searchBarController.dart';
@@ -18,15 +19,15 @@ class FriendsSection extends StatelessWidget {
         children: [
           // 🔹 Section Heading
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 8),
+            padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 8.h),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   'Friends',
                   style: TextStyle(
                     fontFamily: 'RubikMed',
-                    fontSize: 25,
+                    fontSize: 25.sp,
                     fontWeight: FontWeight.w900,
                   ),
                 ),
@@ -40,7 +41,7 @@ class FriendsSection extends StatelessWidget {
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
 
-            padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 12),
+            padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 12.h),
             itemBuilder: (context, index) {
               final friend = friends[index];
               return FriendsCard(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
 import 'package:queezy_app/utils/widgets/small_click_button.dart';
@@ -14,8 +15,8 @@ class PlayQuiz extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              top: 10,
-              left: 4,
+              top: 10.h,
+              left: 4.w,
               child: IconButton(
                 onPressed: () {
                   Get.toNamed(RoutesName.mainScreen);
@@ -24,10 +25,10 @@ class PlayQuiz extends StatelessWidget {
               ),
             ),
             Positioned(
-              width: 250,
-              height: 250,
-              top: 180,
-              left: -25,
+              width: 250.w,
+              height: 250.h,
+              top: 180.h,
+              left: -25.w,
               child: Image.asset(
                 'assets/images/oval5b.png',
                 filterQuality: FilterQuality.high,
@@ -35,10 +36,10 @@ class PlayQuiz extends StatelessWidget {
               ),
             ),
             Positioned(
-              width: 250,
-              height: 250,
-              top: 12,
-              left: 220,
+              width: 250.w,
+              height: 250.h,
+              top: 12.h,
+              left: 220.w,
               child: Image.asset(
                 'assets/images/5.png',
                 filterQuality: FilterQuality.high,
@@ -47,56 +48,56 @@ class PlayQuiz extends StatelessWidget {
             ),
 
             Positioned(
-              top: 8,
-              left: -5,
+              top: 25.h,
+              left: -5.w,
               child: Image.asset(
                 'assets/images/trivia.png',
                 fit: BoxFit.cover,
-                height: 320,
-                width: 440,
+                height: 320.h,
+                width: 440.w,
               ),
             ),
             Positioned(
-              top: 315,
-              left: -4,
+              top: 335.h,
+              left: -4.w,
               child: Container(
-                height: 510,
-                width: 400,
-                margin: EdgeInsets.all(10),
+                height: 510.h,
+                width: 400.w,
+                margin: EdgeInsets.all(10.r),
                 decoration: BoxDecoration(
                   color: Color(0xffFFFFFF),
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(25.r),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(18.0),
+                  padding: EdgeInsets.all(18.0.r),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'SPORTS',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           fontFamily: 'RubikReg',
                           color: Color(0xff858494),
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      SizedBox(height: 5),
+                      SizedBox(height: 5.h),
                       Text(
                         'Basic Trivia Quiz',
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 25.sp,
                           fontFamily: 'RubikMed',
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 20.h),
                       Container(
-                        height: 68,
-                        width: 370,
+                        height: 68.h,
+                        width: 370.w,
                         decoration: BoxDecoration(
                           color: Color(0xffEFEEFC),
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(20.r),
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -106,16 +107,16 @@ class PlayQuiz extends StatelessWidget {
                                 Image.asset(
                                   'assets/images/q.png',
                                   fit: BoxFit.cover,
-                                  height: 35,
-                                  width: 35,
+                                  height: 35.h,
+                                  width: 35.w,
                                 ),
-                                SizedBox(width: 15),
+                                SizedBox(width: 15.w),
                                 Text(
                                   '10 questions',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w900,
                                     fontFamily: 'RubikReg',
-                                    fontSize: 15,
+                                    fontSize: 15.sp,
                                   ),
                                 ),
                               ],
@@ -123,23 +124,23 @@ class PlayQuiz extends StatelessWidget {
                             Image.asset(
                               'assets/images/divider.png',
                               fit: BoxFit.cover,
-                              height: 40,
+                              height: 40.h,
                             ),
                             Row(
                               children: [
                                 Image.asset(
                                   'assets/images/p.png',
                                   fit: BoxFit.cover,
-                                  height: 35,
-                                  width: 35,
+                                  height: 35.h,
+                                  width: 35.w,
                                 ),
-                                SizedBox(width: 15),
+                                SizedBox(width: 15.w),
                                 Text(
                                   '+100 points',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w900,
                                     fontFamily: 'RubikReg',
-                                    fontSize: 15,
+                                    fontSize: 15.sp,
                                   ),
                                 ),
                               ],
@@ -147,32 +148,32 @@ class PlayQuiz extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: 25),
+                      SizedBox(height: 25.h),
 
                       Text(
                         'DESCRIPTION',
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 15.sp,
                           fontFamily: 'RubikMed',
                           color: Color(0xff858494),
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(height: 12),
+                      SizedBox(height: 12.h),
                       Text(
                         'Any time is a good time for a quiz and even\nbetter if that happens to be a football\nthemed quiz!',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 16.h,
                           fontFamily: 'RubikReg',
                           fontWeight: FontWeight.w500,
                           color: Color(0xff0C092A),
                         ),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 10.h),
                       Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 8,
-                          horizontal: 2,
+                        padding: EdgeInsets.symmetric(
+                          vertical: 8.h,
+                          horizontal: 2.w,
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -184,8 +185,8 @@ class PlayQuiz extends StatelessWidget {
                                 Image.asset(
                                   'assets/images/a6.png',
                                   fit: BoxFit.cover,
-                                  height: 45,
-                                  width: 45,
+                                  height: 45.h,
+                                  width: 45.w,
                                 ),
 
                                 // Positioned(
@@ -195,7 +196,7 @@ class PlayQuiz extends StatelessWidget {
                                 // ),
                               ],
                             ),
-                            const SizedBox(width: 16),
+                            SizedBox(width: 16.sp),
 
                             // Name & Points
                             Column(
@@ -214,7 +215,7 @@ class PlayQuiz extends StatelessWidget {
                                   'Creator',
                                   style: TextStyle(
                                     fontFamily: 'RubikMed',
-                                    fontSize: 13,
+                                    fontSize: 13.sp,
                                     color: Colors.black.withOpacity(0.4),
                                   ),
                                 ),
@@ -224,7 +225,7 @@ class PlayQuiz extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 12.0, top: 42),
+                        padding: EdgeInsets.only(left: 12.0.w, top: 42.h),
                         child: Row(
                           children: [
                             SmallClickButton(
@@ -234,10 +235,10 @@ class PlayQuiz extends StatelessWidget {
                               onPressed: () {
                                 Get.toNamed(RoutesName.quiz1);
                               },
-                              h: 65,
-                              w: 160,
+                              h: 65.h,
+                              w: 160.w,
                             ),
-                            SizedBox(width: 12),
+                            SizedBox(width: 12.w),
                             SmallClickButton(
                               buttonColor: Color(0xff6A5AE0),
                               textColor: Colors.white,
@@ -245,8 +246,8 @@ class PlayQuiz extends StatelessWidget {
                               onPressed: () {
                                 Get.toNamed(RoutesName.quiz1);
                               },
-                              h: 65,
-                              w: 180,
+                              h: 65.h,
+                              w: 180.w,
                             ),
                           ],
                         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
 import 'package:queezy_app/utils/widgets/click_button.dart';
@@ -30,24 +31,21 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
             children: [
               // AppBar Section
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 30,
-                ),
+                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 30.h),
                 child: Row(
-                  spacing: 15,
+                  spacing: 15.w,
                   children: [
                     IconButton(
                       onPressed: () {
                         Get.offAndToNamed(RoutesName.resetPassEmailView);
                       },
-                      icon: const Icon(Icons.arrow_back, size: 30),
+                      icon: Icon(Icons.arrow_back, size: 30.r),
                     ),
-                    const SizedBox(width: 20),
-                    const Text(
+                    SizedBox(width: 20.w),
+                    Text(
                       'New Password',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 30.sp,
                         fontFamily: 'RubikReg',
                         fontWeight: FontWeight.w900,
                       ),
@@ -57,13 +55,13 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
               ),
 
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                padding: EdgeInsets.symmetric(horizontal: 24.w),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Your new password must be different from\nthe previous used password',
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 17.sp,
                       wordSpacing: 1,
                       color: Color(0xff858494),
                       fontFamily: 'RubikReg',
@@ -73,17 +71,17 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                   ),
                 ),
               ),
-              const SizedBox(height: 40),
+              SizedBox(height: 40.h),
 
               // Password Label
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                padding: EdgeInsets.symmetric(horizontal: 24.w),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Password",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w900,
                       fontFamily: 'RubikReg',
                       color: Colors.black,
@@ -91,27 +89,27 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
 
               // Password Input Field
               Obx(
                 () => Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Column(
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6),
-                        height: 60,
-                        width: 371,
+                        padding: EdgeInsets.symmetric(horizontal: 6.w),
+                        height: 60.h,
+                        width: 371.w,
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: controller.isPasswordValid
                                 ? const Color(0xff6A5AE0)
                                 : Color(0xffFFFFFF),
-                            width: 2.5,
+                            width: 2.5.w,
                           ),
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(22),
+                          borderRadius: BorderRadius.circular(22.r),
                         ),
                         child: Center(
                           child: TextFormField(
@@ -125,7 +123,7 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                             obscuringCharacter: '●',
                             style: TextStyle(
                               fontFamily: 'RubikReg',
-                              fontSize: 17,
+                              fontSize: 17.sp,
                               color: Colors.black,
                             ),
                             decoration: InputDecoration(
@@ -135,10 +133,10 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                                 fontWeight: FontWeight.w900,
                                 color: Color(0xff858494),
                               ),
-                              prefixIcon: const Icon(
+                              prefixIcon: Icon(
                                 Icons.lock_outline,
                                 color: Color(0xff6A5AE0),
-                                size: 30,
+                                size: 30.r,
                               ),
                               suffixIcon: IconButton(
                                 icon: Icon(
@@ -152,9 +150,9 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                                   });
                                 },
                               ),
-                              contentPadding: const EdgeInsets.symmetric(
-                                vertical: 15,
-                                horizontal: 18,
+                              contentPadding: EdgeInsets.symmetric(
+                                vertical: 15.h,
+                                horizontal: 18.w,
                               ),
                               border: InputBorder.none,
                             ),
@@ -162,19 +160,19 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                         ),
                       ),
 
-                      const SizedBox(height: 10),
+                      SizedBox(height: 10.h),
 
                       // Static error + conditional tick
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(left: 16),
+                            padding: EdgeInsets.only(left: 16.w),
                             child: Text(
                               "Must be at least 8 characters",
                               style: TextStyle(
                                 color: Color(0xff858494),
-                                fontSize: 15,
+                                fontSize: 15.sp,
 
                                 fontWeight: FontWeight.w500,
                                 fontFamily: 'RubikReg',
@@ -183,12 +181,12 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                           ),
 
                           Padding(
-                            padding: const EdgeInsets.only(right: 16),
+                            padding: EdgeInsets.only(right: 16.w),
                             child: controller.isPasswordValid
                                 ? Icon(
                                     Icons.check,
                                     color: Colors.grey.shade400,
-                                    size: 25,
+                                    size: 25.r,
                                   )
                                 : SizedBox.shrink(),
                           ),
@@ -198,17 +196,17 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                   ),
                 ),
               ),
-              const SizedBox(height: 40),
+              SizedBox(height: 40.h),
 
               // Confirm Password Label
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                padding: EdgeInsets.symmetric(horizontal: 24.w),
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Confirm Password",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w900,
                       fontFamily: 'RubikReg',
                       color: Colors.black,
@@ -216,16 +214,16 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
 
               // Confirm Password Input Field
               Obx(
                 () => Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6),
-                    height: 60,
-                    width: 371,
+                    padding: EdgeInsets.symmetric(horizontal: 6.w),
+                    height: 60.h,
+                    width: 371.w,
                     decoration: BoxDecoration(
                       border: Border.all(
                         color:
@@ -233,10 +231,10 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                                 controller.confirmPassword.isNotEmpty
                             ? Color(0xff6A5AE0)
                             : Colors.grey,
-                        width: 2.5,
+                        width: 2.5.w,
                       ),
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(22),
+                      borderRadius: BorderRadius.circular(22.r),
                     ),
                     child: Center(
                       child: TextFormField(
@@ -249,20 +247,21 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                         enableSuggestions: true,
                         style: TextStyle(
                           fontFamily: 'RubikReg',
-                          fontSize: 17,
+                          fontSize: 17.sp,
                           color: Colors.black,
                         ),
                         decoration: InputDecoration(
                           hintText: "Confirm password",
+                          floatingLabelBehavior: FloatingLabelBehavior.never,
                           hintStyle: TextStyle(
                             fontFamily: 'RubikReg',
                             fontWeight: FontWeight.w900,
                             color: Color(0xff858494),
                           ),
-                          prefixIcon: const Icon(
+                          prefixIcon: Icon(
                             Icons.lock_outline,
                             color: Color(0xff6A5AE0),
-                            size: 30,
+                            size: 30.r,
                           ),
                           suffixIcon: IconButton(
                             icon: Icon(
@@ -277,9 +276,9 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                               });
                             },
                           ),
-                          contentPadding: const EdgeInsets.symmetric(
-                            vertical: 15,
-                            horizontal: 18,
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 15.h,
+                            horizontal: 18.w,
                           ),
                           border: InputBorder.none,
                         ),
@@ -288,7 +287,7 @@ class _ResetPassPasswordViewState extends State<ResetPassPasswordView> {
                   ),
                 ),
               ),
-              const SizedBox(height: 100),
+              SizedBox(height: 100.h),
 
               // Reset Button
               Obx(

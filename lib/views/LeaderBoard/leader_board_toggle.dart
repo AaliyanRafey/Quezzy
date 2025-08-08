@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/view_model/controller/leaderboard_controller.dart';
 
@@ -11,11 +12,11 @@ class LeaderBoardToggle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => Container(
-        height: 55,
-        width: 400,
+        height: 56.h,
+        width: 360.w,
         decoration: BoxDecoration(
           color: const Color(0xFF0C092A).withOpacity(0.16),
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(25.r),
         ),
         child: Row(
           children: [
@@ -23,8 +24,8 @@ class LeaderBoardToggle extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => controller.changeTab(0),
                 child: AnimatedContainer(
-                  height: 45,
-                  width: 55,
+                  height: 45.h,
+                  width: 55.w,
                   duration: Duration(milliseconds: 300),
                   decoration: BoxDecoration(
                     color: controller.selectedTab.value == 0
@@ -40,7 +41,7 @@ class LeaderBoardToggle extends StatelessWidget {
                           ? Colors.white
                           : Colors.white70,
                       fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                      fontSize: 18.sp,
                     ),
                   ),
                 ),
@@ -50,14 +51,14 @@ class LeaderBoardToggle extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => controller.changeTab(1),
                 child: AnimatedContainer(
-                  height: 45,
-                  width: 55,
+                  height: 45.h,
+                  width: 55.w,
                   duration: Duration(milliseconds: 300),
                   decoration: BoxDecoration(
                     color: controller.selectedTab.value == 1
                         ? Color(0xFF9F92F1)
                         : Colors.transparent,
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: BorderRadius.circular(25.r),
                   ),
                   alignment: Alignment.center,
                   child: Text(
@@ -67,7 +68,7 @@ class LeaderBoardToggle extends StatelessWidget {
                           ? Colors.white
                           : Color(0xffe6e6e6),
                       fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                      fontSize: 18.sp,
                     ),
                   ),
                 ),

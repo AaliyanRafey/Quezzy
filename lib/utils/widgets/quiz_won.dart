@@ -1,42 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:queezy_app/utils/widgets/quizstat.dart';
 
 Widget quizWon() {
   return Container(
-    width: 360,
-    height: 530,
+    width: 360.w,
+    height: 530.h,
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(20.r),
       color: Color(0xffE8E5FA),
     ),
     child: Stack(
       children: [
         Positioned(
-          top: -70,
-          left: 2,
+          top: -70.h,
+          left: 2.w,
 
           child: Image.asset(
             'assets/images/l.png',
             fit: BoxFit.fitWidth,
-            height: 250,
-            width: 250,
+            height: 250.h,
+            width: 250.w,
           ),
         ),
         // monthly dropdown
         Positioned(
-          top: 20,
-          right: 20,
+          top: 20.h,
+          right: 20.w,
           child: Container(
-            height: 42,
-            width: 100,
+            height: 42.h,
+            width: 100.w,
             decoration: BoxDecoration(
               color: Colors.white,
-              border: Border.all(color: Color(0xffefeefc), width: 2.5),
-              borderRadius: BorderRadius.circular(24),
+              border: Border.all(color: Color(0xffefeefc), width: 2.5.w),
+              borderRadius: BorderRadius.circular(24.r),
             ),
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                padding: EdgeInsets.symmetric(horizontal: 8.0.w),
                 child: Row(
                   children: [
                     Text(
@@ -44,13 +45,13 @@ Widget quizWon() {
                       style: TextStyle(
                         fontFamily: 'RubikMed',
                         fontWeight: FontWeight.w700,
-                        fontSize: 14,
+                        fontSize: 14.sp,
                       ),
                     ),
                     Icon(
                       Icons.arrow_drop_down,
                       color: Color(0xff6A5AE0),
-                      size: 20,
+                      size: 20.r,
                     ),
                   ],
                 ),
@@ -60,8 +61,8 @@ Widget quizWon() {
         ),
         // text
         Positioned(
-          top: 120,
-          left: 38,
+          top: 120.h,
+          left: 38.w,
 
           child: RichText(
             text: TextSpan(
@@ -69,7 +70,7 @@ Widget quizWon() {
                 TextSpan(
                   text: 'You have played a total ',
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 26.sp,
                     fontWeight: FontWeight.w700,
                     fontFamily: 'RubikMed',
                     color: Colors.black, // important
@@ -78,7 +79,7 @@ Widget quizWon() {
                 TextSpan(
                   text: '\n24 quizzes ',
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 26.sp,
                     fontWeight: FontWeight.w700,
                     fontFamily: 'RubikMed',
                     color: Color(0xff6a5ae0), // purple
@@ -87,7 +88,7 @@ Widget quizWon() {
                 TextSpan(
                   text: 'this month!',
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 26.sp,
                     fontWeight: FontWeight.w700,
                     fontFamily: 'RubikMed',
                     color: Colors.black,
@@ -99,21 +100,21 @@ Widget quizWon() {
         ),
         //circle
         Positioned(
-          top: 210,
-          left: 95,
+          top: 210.h,
+          left: 95.w,
           child: Image.asset(
             'assets/images/o.png',
             fit: BoxFit.fitHeight,
-            height: 170,
-            width: 170,
+            height: 170.h,
+            width: 170.w,
           ),
         ),
         //positioned container
         Positioned(
-          top: 400,
-          left: 10,
+          top: 400.h,
+          left: 10.w,
           child: Padding(
-            padding: const EdgeInsets.only(left: 6.0),
+            padding: EdgeInsets.only(left: 6.0.w),
             child: Row(
               spacing: 20,
               children: [

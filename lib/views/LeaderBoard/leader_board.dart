@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'package:queezy_app/res/routes/routes_name.dart';
@@ -19,30 +20,30 @@ class _LeaderBoardViewState extends State<LeaderBoardView> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: EdgeInsets.symmetric(horizontal: 10.0.w),
       child: Column(
         children: [
           Row(
             children: [
               IconButton(
                 onPressed: () => Get.toNamed(RoutesName.mainScreen),
-                icon: Icon(Icons.arrow_back, size: 30, color: Colors.white),
+                icon: Icon(Icons.arrow_back, size: 30.sp, color: Colors.white),
               ),
-              const SizedBox(width: 54),
+              SizedBox(width: 64.w),
               Text(
                 'Leaderboard',
                 style: TextStyle(
                   fontFamily: 'RubikMed',
                   color: Colors.white,
-                  fontSize: 26,
+                  fontSize: 26.sp,
                   fontWeight: FontWeight.w900,
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
           LeaderBoardToggle(), // THIS SHOULD NOW APPEAR
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
           Expanded(
             child: Obx(() {
               final selected =

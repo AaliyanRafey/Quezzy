@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SmallClickButton extends StatelessWidget {
   final Color buttonColor;
@@ -26,8 +27,8 @@ class SmallClickButton extends StatelessWidget {
         height: h,
         width: w,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          border: Border.all(color: Color(0xffEFEEFC), width: 3),
+          borderRadius: BorderRadius.circular(25.r),
+          border: Border.all(color: Color(0xffEFEEFC), width: 3.w),
           color: buttonColor,
         ),
         child: Center(
@@ -36,7 +37,7 @@ class SmallClickButton extends StatelessWidget {
 
             style: TextStyle(
               fontFamily: 'RubikMed',
-              fontSize: 17.5,
+              fontSize: 17.5.sp,
               fontWeight: FontWeight.w900,
               color: textColor,
             ),

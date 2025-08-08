@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
@@ -28,25 +29,22 @@ class _LoginViewState extends State<LoginView> {
               //    APPBAR
               //----------
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 30,
-                ),
+                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 30.h),
                 child: Row(
-                  spacing: 100,
+                  spacing: 100.w,
                   children: [
                     IconButton(
                       onPressed: () {
                         Get.offAllNamed(RoutesName.loginorsignup);
                       },
-                      icon: Icon(Icons.arrow_back, size: 30),
+                      icon: Icon(Icons.arrow_back, size: 30.r),
                     ),
                     Text(
                       'Login',
                       style: TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'RubikReg',
-                        fontWeight: FontWeight.w900,
+                        fontSize: 30.sp,
+                        fontFamily: 'RubikMed',
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ],
@@ -62,7 +60,7 @@ class _LoginViewState extends State<LoginView> {
                 backgroundColor: Colors.white,
                 textColor: Colors.black,
               ),
-              SizedBox(height: 18),
+              SizedBox(height: 18.h),
               // Facebook Button
               LoginButton(
                 label: 'Login with facebook',
@@ -72,26 +70,34 @@ class _LoginViewState extends State<LoginView> {
                 backgroundColor: Color(0xff0056B2),
                 textColor: Colors.white,
               ),
-              SizedBox(height: 35),
+              SizedBox(height: 35.h),
               // ---------0r------------
               Row(
-                spacing: 35,
+                spacing: 35.w,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(height: 1, width: 130, color: Color(0xffe6e6e6)),
+                  Container(
+                    height: 2.h,
+                    width: 130.w,
+                    color: Color(0xffe6e6e6),
+                  ),
                   Text(
                     'OR',
                     style: TextStyle(
                       color: Color(0xff858494),
-                      fontSize: 19,
+                      fontSize: 19.sp,
                       fontFamily: 'RubikMed',
                       fontWeight: FontWeight.w100,
                     ),
                   ),
-                  Container(height: 1, width: 130, color: Color(0xffe6e6e6)),
+                  Container(
+                    height: 2.h,
+                    width: 130.w,
+                    color: Color(0xffe6e6e6),
+                  ),
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
 
               ///-------------
               /// ENTER EMAIL AND PASSOWRD FIELDS
@@ -99,7 +105,7 @@ class _LoginViewState extends State<LoginView> {
               ///
               LoginFields(),
 
-              SizedBox(height: 30),
+              SizedBox(height: 30.h),
 
               /// -----------
               /// lOGIN bUTTON
@@ -112,7 +118,7 @@ class _LoginViewState extends State<LoginView> {
                   Get.offAllNamed(RoutesName.mainScreen);
                 },
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 10.h),
 
               //---------
               ///Forgot password
@@ -123,9 +129,9 @@ class _LoginViewState extends State<LoginView> {
                     Get.offAllNamed(RoutesName.resetPassEmailView);
                   },
                   child: Text(
-                    'Forgot Passowrd?',
+                    'Forgot Password?',
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 17.sp,
                       color: Color(0xff6A5AE0),
                       fontFamily: 'RubikBold',
                       fontWeight: FontWeight.w100,
@@ -137,11 +143,11 @@ class _LoginViewState extends State<LoginView> {
               /// Terms
               /// and
               /// Condtions
-              SizedBox(height: 10),
+              SizedBox(height: 10.h),
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 10.0,
-                  vertical: 10,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10.0.w,
+                  vertical: 10.h,
                 ),
                 child: Center(
                   child: RichText(
@@ -152,7 +158,7 @@ class _LoginViewState extends State<LoginView> {
                           text: 'By continuing, you agree to the ',
                           style: TextStyle(
                             fontFamily: 'RubikReg',
-                            fontSize: 14.5,
+                            fontSize: 14.5.sp,
                             color: Colors.black.withOpacity(0.4),
                             fontWeight: FontWeight.w900,
                           ),
@@ -161,7 +167,7 @@ class _LoginViewState extends State<LoginView> {
                           text: ' Terms of Services',
                           style: TextStyle(
                             fontFamily: 'RubikBold',
-                            fontSize: 14.5,
+                            fontSize: 14.5.sp,
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
                           ),
@@ -170,7 +176,7 @@ class _LoginViewState extends State<LoginView> {
                           text: ' &\n',
                           style: TextStyle(
                             fontFamily: 'RubikReg',
-                            fontSize: 14.5,
+                            fontSize: 14.5.sp,
                             color: Colors.black.withOpacity(0.3),
                             fontWeight: FontWeight.w600,
                           ),
@@ -179,7 +185,7 @@ class _LoginViewState extends State<LoginView> {
                           text: 'Privacy policy',
                           style: TextStyle(
                             fontFamily: 'RubikBold',
-                            fontSize: 14.5,
+                            fontSize: 14.5.sp,
                             color: Colors.black,
                             fontWeight: FontWeight.w600,
                           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:queezy_app/view_model/category_model.dart';
 
 class CategoryBlockForCreatequiz extends StatelessWidget {
@@ -8,41 +9,41 @@ class CategoryBlockForCreatequiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 146,
-      width: 132,
+      height: 146.h,
+      width: 132.w,
       decoration: BoxDecoration(
         color: category.bgColor,
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(25.r),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 14),
+        padding: EdgeInsets.symmetric(vertical: 14.h),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               category.image,
               fit: BoxFit.fitHeight,
-              height: 60,
-              width: 60,
+              height: 60.h,
+              width: 60.w,
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Text(
               category.text,
               style: TextStyle(
                 fontFamily: 'RubikReg',
-                fontSize: 20,
+                fontSize: 20.sp,
                 color: category.textColor,
 
                 fontWeight: FontWeight.w900,
               ),
             ),
-            SizedBox(height: 2),
+            SizedBox(height: 2.h),
             Text(
               category.quiz,
               style: TextStyle(
                 color: category.textColor,
                 fontFamily: 'RubikReg',
-                fontSize: 12,
+                fontSize: 12.sp,
                 fontWeight: FontWeight.w400,
               ),
             ),

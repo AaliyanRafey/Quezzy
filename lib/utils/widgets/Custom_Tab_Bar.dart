@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/view_model/controller/searchBarController.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTabBar extends StatelessWidget {
   const CustomTabBar({super.key});
@@ -11,7 +12,7 @@ class CustomTabBar extends StatelessWidget {
     final tabs = ['Top', 'Quiz', 'Categories', 'Friends'];
     return Obx(() {
       return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        padding: EdgeInsets.symmetric(horizontal: 10.0.w),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: tabs.map((tab) {
@@ -38,16 +39,16 @@ class CustomTabBar extends StatelessWidget {
                             ? FontWeight.w900
                             : FontWeight.w100,
                         fontFamily: isSelected ? 'RubikMed' : 'RubikMed',
-                        fontSize: 17,
+                        fontSize: 17.sp,
                       ),
                     ),
                   ),
 
-                  SizedBox(height: 10),
+                  SizedBox(height: 10.h),
                   AnimatedContainer(
                     duration: const Duration(milliseconds: 300),
-                    height: 8,
-                    width: 8,
+                    height: 8.h,
+                    width: 8.w,
                     decoration: BoxDecoration(
                       color: isSelected
                           ? const Color(0xff6A5AE0)

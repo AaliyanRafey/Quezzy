@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
 import 'package:queezy_app/utils/widgets/click_button.dart';
@@ -15,49 +16,54 @@ class Quiz3 extends StatelessWidget {
       backgroundColor: Color(0xff6A5AE0),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: EdgeInsets.all(16.0.r),
           child: Column(
             children: [
+              SizedBox(height: 25),
               Image.asset(
                 'assets/images/top1.png',
                 fit: BoxFit.cover,
-                height: 36,
-                width: 377,
+                height: 36.h,
+                width: 377.w,
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20.h),
               Container(
-                height: 750,
-                width: 390,
+                height: 750.h,
+                width: 390.w,
                 decoration: BoxDecoration(
                   color: Color(0xffFFFFFF),
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(30.r),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(9.0),
+                  padding: EdgeInsets.all(9.0.r),
                   child: Column(
                     children: [
-                      SizedBox(height: 20),
-                      PieCountdown(seconds: 10, size: 70, nextScreen: Quiz4()),
+                      SizedBox(height: 20.h),
+                      PieCountdown(
+                        seconds: 10,
+                        size: 80.r,
+                        nextScreen: Quiz4(),
+                      ),
                       SizedBox(height: 50),
                       Padding(
-                        padding: const EdgeInsets.all(15.0),
+                        padding: EdgeInsets.all(15.0.r),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               'QUESTION 5 OF 10',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 14.sp,
                                 fontFamily: 'RubikReg',
                                 color: Color(0xff858494),
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                            SizedBox(height: 5),
+                            SizedBox(height: 5.h),
                             Text(
                               'Who are three players share the record for most Premier League red cards (8)?',
                               style: TextStyle(
-                                fontSize: 21,
+                                fontSize: 21.sp,
                                 fontFamily: 'RubikMed',
                                 fontWeight: FontWeight.w700,
                               ),
@@ -65,24 +71,24 @@ class Quiz3 extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: 15),
+                      SizedBox(height: 15.h),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                        padding: EdgeInsets.symmetric(horizontal: 5.0.w),
                         child: GestureDetector(
                           onTap: () {
                             Get.toNamed(RoutesName.quiz4);
                           },
                           child: Container(
-                            padding: EdgeInsets.symmetric(horizontal: 6),
-                            height: 232,
-                            width: 371,
+                            padding: EdgeInsets.symmetric(horizontal: 6.w),
+                            height: 232.h,
+                            width: 371.w,
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Color(0xffEFEEFC),
-                                width: 3,
+                                width: 3.w,
                               ),
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(22),
+                              borderRadius: BorderRadius.circular(22.r),
                             ),
                             child: Align(
                               alignment: Alignment.topLeft,
@@ -98,12 +104,12 @@ class Quiz3 extends StatelessWidget {
 
                                   border: InputBorder.none,
                                   contentPadding: EdgeInsets.symmetric(
-                                    vertical: 15,
-                                    horizontal: 18,
+                                    vertical: 15.h,
+                                    horizontal: 18.w,
                                   ),
                                 ),
                                 style: TextStyle(
-                                  fontSize: 17,
+                                  fontSize: 17.sp,
                                   fontFamily: 'Rubik',
                                 ),
                               ),
@@ -111,7 +117,7 @@ class Quiz3 extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 140),
+                      SizedBox(height: 140.h),
                       ClickButton(
                         buttonColor: const Color(0xff6A5AE0),
                         textColor: Colors.white,

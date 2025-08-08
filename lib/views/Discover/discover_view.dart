@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/utils/widgets/category_section.dart';
 import 'package:queezy_app/utils/widgets/top_Rank_card.dart';
@@ -12,7 +13,7 @@ class DiscoverView extends StatelessWidget {
   DiscoverView({super.key});
 
   final controller = Get.put(Searchbarcontroller());
-  final double topSectionHeightPercentage = 0.52;
+  final double topSectionHeightPercentage = 0.52.h;
 
   @override
   Widget build(BuildContext context) {
@@ -20,28 +21,31 @@ class DiscoverView extends StatelessWidget {
     final topSectionHeight = screenHeight * topSectionHeightPercentage;
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
+      resizeToAvoidBottomInset: false,
       body: GestureDetector(
-        behavior: HitTestBehavior.translucent, // detect tap on empty space too
+        behavior: HitTestBehavior.translucent,
         onTap: () {
-          FocusScope.of(context).unfocus(); // hide keyboard
+          FocusScope.of(context).unfocus();
           if (controller.isSearchActive.value) {
-            controller.deactivateSearch(); // back to DiscoverView
+            controller.deactivateSearch();
           }
         },
         child: SafeArea(
+          bottom:
+              false, // ← This is important to allow content behind bottom nav
           child: Column(
             children: [
               // Fixed Top Section (AppBar + SearchBar)
               Container(
                 color: const Color(0xff6A5AE0),
-                padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                padding: EdgeInsets.symmetric(horizontal: 14.0.w),
                 child: Column(
                   children: [
                     appBar(),
-                    const SizedBox(height: 5),
+                    SizedBox(height: 5.h),
                     searchBar(),
-                    const SizedBox(height: 25),
+                    SizedBox(height: 25.h),
                   ],
                 ),
               ),
@@ -50,7 +54,7 @@ class DiscoverView extends StatelessWidget {
               Expanded(
                 child: Obx(() {
                   return controller.isSearchActive.value
-                      ? const SearchContainer() // White search results
+                      ? const SearchContainer()
                       : _buildNormalDiscoverView(context, topSectionHeight);
                 }),
               ),
@@ -64,65 +68,59 @@ class DiscoverView extends StatelessWidget {
   Widget _buildNormalDiscoverView(BuildContext context, double topHeight) {
     return Stack(
       children: [
-        // Background Purple + White
-        Column(
-          children: [
-            Container(
-              height:
-                  MediaQuery.of(context).size.height * 0.52 -
-                  60, // Adjust for fixed app bar height
-              color: const Color(0xff6A5AE0),
-            ),
-            Expanded(child: Container(color: Colors.white)),
-          ],
-        ),
+        // Purple top section background
+        Container(height: topHeight - 95.h, color: const Color(0xff6A5AE0)),
 
-        // Scrollable Content
+        // Scrollable content
         SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
-              // Purple Section Content
-              Container(
-                // DesignBlocks height
-                color: Colors.transparent,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 14.0),
-                  child: DesignBlocks(),
-                ),
+              // Purple section
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 14.0.w),
+                child: DesignBlocks(),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 30.h),
 
-              // White Section Content
+              // White section with rounded top
               ClipRRect(
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(32),
-                  topRight: Radius.circular(32),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(32.r),
+                  topRight: Radius.circular(32.r),
                 ),
                 child: Container(
+                  padding: EdgeInsets.fromLTRB(
+                    10.h,
+                    10.w,
+                    14.w,
+                    0,
+                  ), // ← Remove bottom padding
                   color: Colors.white,
-                  padding: const EdgeInsets.fromLTRB(14, 10, 14, 30),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.symmetric(
-                          horizontal: 12.0,
-                          vertical: 12,
+                          horizontal: 12.w,
+                          vertical: 12.h,
                         ),
                         child: Text(
                           'Top rank of the week',
                           style: TextStyle(
                             fontFamily: 'RubikMed',
-                            fontSize: 23,
-                            color: Color(0xff0C092A),
+                            fontSize: 25.sp,
+                            color: const Color(0xff0C092A),
                             fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),
-                      const SizedBox(height: 8),
+                      SizedBox(height: 8.h),
                       topRankCard(),
                       const CategorySection(),
+                      SizedBox(
+                        height: kBottomNavigationBarHeight,
+                      ), // ← Add space for bottom nav
                     ],
                   ),
                 ),

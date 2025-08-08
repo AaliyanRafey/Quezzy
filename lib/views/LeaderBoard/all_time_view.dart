@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:queezy_app/views/LeaderBoard/user_rank_list.dart';
 
@@ -11,7 +12,7 @@ class AllTimeView extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
 
           // Use Stack to overlap base on top of pod
           Stack(
@@ -20,34 +21,35 @@ class AllTimeView extends StatelessWidget {
               // Podium
               Image.asset(
                 'assets/images/pod1.png',
-                height: 530,
+                height: 470.h,
                 width: double.infinity,
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
               ),
 
               // Base + List (exact original positioning)
               Positioned(
-                top:
-                    380, // Same as your original 400 - adjusted for better overlap
-                left: 0,
-                right: 0,
+                top: 340
+                    .h, // Same as your original 400 - adjusted for better overlap
+                left: 0.w,
+                right: 0.w,
                 child: SizedBox(
-                  height: 720, // Match your base.png height
+                  // Match your base.png height
                   child: Stack(
                     clipBehavior: Clip.none,
                     children: [
                       Image.asset(
                         'assets/images/base.png',
-                        height: 720,
+                        height: 780.h,
                         color: Color(0xffefeefc),
-                        width: 450,
-                        fit: BoxFit.fitHeight,
+                        width: 780.w,
+                        fit: BoxFit.contain,
                       ),
+
                       Positioned(
-                        top: 20, // Adjust this to move list up/down on base
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
+                        top: 20.h, // Adjust this to move list up/down on base
+                        left: 0.w,
+                        right: 0.w,
+                        bottom: 0.h,
                         child: UserRankList(),
                       ),
                     ],
@@ -56,7 +58,7 @@ class AllTimeView extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 800), // extra space at bottom if needed
+          SizedBox(height: 800.h), // extra space at bottom if needed
         ],
       ),
     );

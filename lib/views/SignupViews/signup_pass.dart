@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
 import 'package:queezy_app/utils/widgets/click_button.dart';
@@ -20,9 +21,9 @@ class SignupPass extends StatelessWidget {
                 ///--appBar--
                 ///-----
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 30,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10.w,
+                    vertical: 30.h,
                   ),
                   child: Row(
                     spacing: 5,
@@ -31,12 +32,12 @@ class SignupPass extends StatelessWidget {
                         onPressed: () {
                           Get.offAllNamed(RoutesName.signUpEmail);
                         },
-                        icon: Icon(Icons.arrow_back, size: 30),
+                        icon: Icon(Icons.arrow_back, size: 30.r),
                       ),
                       Text(
                         "What's your Password ?",
                         style: TextStyle(
-                          fontSize: 28,
+                          fontSize: 28.sp,
                           fontFamily: 'RubikReg',
                           fontWeight: FontWeight.w900,
                         ),
@@ -44,15 +45,15 @@ class SignupPass extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                  padding: EdgeInsets.symmetric(horizontal: 22.w),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       "Password",
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 16.sp,
                         fontWeight: FontWeight.w900,
                         fontFamily: 'RubikReg',
                         color: Colors.black,
@@ -60,17 +61,17 @@ class SignupPass extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 // Email Field
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 6),
-                    height: 60,
-                    width: 371,
+                    padding: EdgeInsets.symmetric(horizontal: 6.w),
+                    height: 60.h,
+                    width: 371.w,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(22),
+                      borderRadius: BorderRadius.circular(22.r),
                     ),
                     child: Center(
                       child: TextFormField(
@@ -81,6 +82,7 @@ class SignupPass extends StatelessWidget {
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
                           hintText: "Your password",
+                          floatingLabelBehavior: FloatingLabelBehavior.never,
                           hintStyle: TextStyle(
                             fontFamily: 'RubikReg',
                             fontWeight: FontWeight.w900,
@@ -89,26 +91,26 @@ class SignupPass extends StatelessWidget {
                           prefixIcon: Icon(
                             Icons.lock_outline,
                             color: Color(0xff6A5AE0),
-                            size: 30,
+                            size: 30.r,
                           ),
                           border: InputBorder.none,
                           contentPadding: EdgeInsets.symmetric(
-                            vertical: 15,
-                            horizontal: 18,
+                            vertical: 15.h,
+                            horizontal: 18.w,
                           ),
                         ),
-                        style: TextStyle(fontSize: 17, fontFamily: 'Rubik'),
+                        style: TextStyle(fontSize: 17.sp, fontFamily: 'Rubik'),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 200),
+                SizedBox(height: 200.h),
 
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  padding: EdgeInsets.symmetric(horizontal: 20.w),
                   child: LinearProgressIndicator(
                     value: 0.63, // ✅ this sets the progress to 33%
-                    minHeight: 10,
+                    minHeight: 10.h,
                     backgroundColor: Color.fromARGB(255, 223, 223, 223),
                     valueColor: AlwaysStoppedAnimation(
                       Color(0xff6A5AE0),
@@ -118,7 +120,7 @@ class SignupPass extends StatelessWidget {
                     ), // ✅ for rounded corners (needs Material 3 or wrap)
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 ClickButton(
                   buttonColor: Color(0xff6A5AE0),
                   textColor: Color(0xffFFFFFF),
@@ -132,14 +134,14 @@ class SignupPass extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 420,
-          left: 336,
+          top: 420.h,
+          left: 336.w,
           child: Text(
             '2 of 3',
             style: TextStyle(
               fontWeight: FontWeight.w900,
               fontFamily: 'RubikReg',
-              fontSize: 20,
+              fontSize: 20.sp,
               color: Color(0xff6A5AE0),
             ),
           ),

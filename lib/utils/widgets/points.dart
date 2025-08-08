@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Points extends StatelessWidget {
   final String image, text, number;
@@ -12,20 +13,20 @@ class Points extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16.0),
+      padding: EdgeInsets.symmetric(vertical: 16.0.h, horizontal: 1.w),
       child: Column(
         children: [
           Image.asset(
             image,
             fit: BoxFit.cover,
-            width: 32,
-            height: 32,
+            width: 32.w,
+            height: 32.h,
             color: Colors.white,
           ),
           Text(
             text.toUpperCase(),
             style: TextStyle(
-              fontSize: 12.5,
+              fontSize: 12.5.sp,
               fontFamily: 'RubikMed',
               color: Color(0xffefeefc).withOpacity(0.5),
               fontWeight: FontWeight.w700,
@@ -34,7 +35,7 @@ class Points extends StatelessWidget {
           Text(
             number,
             style: TextStyle(
-              fontSize: 16.5,
+              fontSize: 16.5.sp,
               fontFamily: 'RubikMed',
               color: Color(0xffFFFFFF),
               fontWeight: FontWeight.w700,

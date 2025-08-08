@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/utils/widgets/build_option.dart';
 import 'package:queezy_app/view_model/controller/option_selection_controller.dart';
@@ -25,12 +26,12 @@ class OptionSelectScreenView extends StatelessWidget {
               return BuildOption(title: options[i ~/ 2], index: i ~/ 2);
             } else {
               // Spacer between options
-              return SizedBox(width: 68); // Change width as needed
+              return SizedBox(width: 68.w); // Change width as needed
             }
           }),
         ),
 
-        SizedBox(height: 20),
+        SizedBox(height: 20.h),
         Obx(() {
           switch (controller.selectedIndex.value) {
             case 0:

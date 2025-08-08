@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class QuizStat extends StatelessWidget {
   final String no, text, image;
@@ -15,8 +16,8 @@ class QuizStat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      width: 155,
+      height: 100.h,
+      width: 155.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: boxColor,
@@ -24,14 +25,19 @@ class QuizStat extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            top: 10,
-            right: 10,
+            top: 10.h,
+            right: 10.w,
 
-            child: Image.asset(image, fit: BoxFit.cover, height: 30, width: 30),
+            child: Image.asset(
+              image,
+              fit: BoxFit.cover,
+              height: 30.h,
+              width: 30.w,
+            ),
           ),
           Positioned(
-            top: 18,
-            left: 20,
+            top: 18.h,
+            left: 20.w,
             child: RichText(
               text: TextSpan(
                 children: [
@@ -41,7 +47,7 @@ class QuizStat extends StatelessWidget {
                       fontWeight: FontWeight.w900,
                       fontFamily: 'RubikMed',
                       color: textColor,
-                      fontSize: 38,
+                      fontSize: 38.sp,
                     ),
                   ),
                   TextSpan(
@@ -50,7 +56,7 @@ class QuizStat extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       fontFamily: 'RubikReg',
                       color: textColor,
-                      fontSize: 14.5,
+                      fontSize: 14.5.sp,
                     ),
                   ),
                 ],

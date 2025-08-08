@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:queezy_app/view_model/question_column_model.dart';
 
@@ -12,8 +13,8 @@ class QuestionColumn extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 35,
-          width: 35,
+          height: 35.h,
+          width: 35.w,
           decoration: BoxDecoration(
             color: Colors.white,
             shape: BoxShape.circle,
@@ -22,7 +23,7 @@ class QuestionColumn extends StatelessWidget {
             child: Text(
               item.qno,
               style: TextStyle(
-                fontSize: 19,
+                fontSize: 19.sp,
                 fontFamily: 'RubikReg',
                 fontWeight: FontWeight.w600,
                 color: Color(0xff6A5AE0),
@@ -31,7 +32,7 @@ class QuestionColumn extends StatelessWidget {
           ),
         ),
 
-        const SizedBox(width: 10),
+        SizedBox(width: 10.w),
 
         Expanded(
           child: RichText(
@@ -39,7 +40,7 @@ class QuestionColumn extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'RubikReg',
                 fontWeight: FontWeight.w900,
-                fontSize: 17.5,
+                fontSize: 17.5.sp,
                 color: Colors.black,
               ),
               children: [
@@ -47,7 +48,7 @@ class QuestionColumn extends StatelessWidget {
                 TextSpan(
                   text: item.subText != null ? '\n\n${item.subText}' : '',
                   style: TextStyle(
-                    fontSize: 16.5,
+                    fontSize: 16.5.sp,
                     fontWeight: FontWeight.w700,
                     fontFamily: 'RubikReg',
                     color: Color(0xff858494),
@@ -60,8 +61,12 @@ class QuestionColumn extends StatelessWidget {
 
         if (item.svgAsset != null && item.svgAsset!.trim().isNotEmpty)
           Padding(
-            padding: const EdgeInsets.only(left: 6, top: 2),
-            child: SvgPicture.asset(item.svgAsset ?? '', width: 6, height: 6),
+            padding: EdgeInsets.only(left: 6.w, top: 2.h),
+            child: SvgPicture.asset(
+              item.svgAsset ?? '',
+              width: 26.w,
+              height: 26.h,
+            ),
           ),
       ],
     );

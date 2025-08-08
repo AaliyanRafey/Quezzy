@@ -1,91 +1,102 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:queezy_app/views/home_screen/find_friends.dart';
 import 'package:queezy_app/views/home_screen/live_quizzes.dart';
 import 'package:queezy_app/views/home_screen/name_bar.dart';
-import 'package:queezy_app/views/home_screen/recent_quiz.dart';
+
+import 'recent_quiz.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final double screenHeight = MediaQuery.of(context).size.height;
-    final double liveQuizTop = screenHeight * 0.70; // <-- Sweet spot
-
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Stack(
-        children: [
-          // 1. Background split: purple top, white bottom
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+      backgroundColor: const Color(0xff6A5AE0),
+
+      // 👇 Your Bottom Navigation Bar
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        onTap: (index) {},
+        selectedItemColor: Color(0xff6A5AE0),
+        unselectedItemColor: Colors.grey,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+        ],
+      ),
+
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.only(
+            bottom:
+                MediaQuery.of(context).padding.bottom + 80.h, // prevent overlap
+          ),
+          child: Column(
             children: [
-              Container(
-                height: liveQuizTop,
-                color: const Color(0xff6A5AE0),
-                child: SafeArea(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 14.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 10),
-                        nameBar(),
-                        const SizedBox(height: 25),
-                        recentQuiz(),
-                        const SizedBox(height: 25),
-                        findFriends(),
-                      ],
-                    ),
-                  ),
+              // Purple Section
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 14.w),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 20.h),
+                    nameBar(),
+                    SizedBox(height: 20.h),
+                    recentQuiz(),
+                    SizedBox(height: 20.h),
+                    findFriends(),
+                  ],
                 ),
               ),
-              // White base (under LiveQuizzes)
-              Expanded(child: Container(color: Colors.white)),
-            ],
-          ),
 
-          // 2. Live Quizzes (Scrollable!)
-          Positioned(
-            top: liveQuizTop - 110, // Slight overlap (20px above)
-            left: 0,
-            right: 0,
-            bottom: 0, // So it can scroll till the bottom nav
-            child: ClipRRect(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(30),
-                topRight: Radius.circular(30),
-              ),
-              child: Container(
-                color: Colors.white,
-                child: SingleChildScrollView(
-                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 68),
+              // White container with curved top
+              Container(
+                width: double.infinity,
+                margin: EdgeInsets.only(top: 15.h),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(35.r),
+                    topRight: Radius.circular(35.r),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 10,
+                      offset: Offset(0, -4),
+                    ),
+                  ],
+                ),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(16.h, 14.h, 16.w, 24.h),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       // Header Row
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
+                            Text(
                               'Live Quizzes',
                               style: TextStyle(
                                 fontFamily: 'RubikMed',
-                                fontSize: 24.5,
+                                fontSize: 26.5.sp,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xff0C092A),
+                                color: const Color(0xff0C092A),
                               ),
                             ),
                             TextButton(
                               onPressed: () {},
-                              child: const Text(
+                              child: Text(
                                 'See all',
                                 style: TextStyle(
                                   fontFamily: 'RubikMed',
                                   fontWeight: FontWeight.w900,
-                                  fontSize: 17,
-                                  color: Color(0xff6A5AE0),
+                                  fontSize: 19.sp,
+                                  color: const Color(0xff6A5AE0),
                                 ),
                               ),
                             ),
@@ -93,17 +104,15 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
 
-                      // Your dynamic list or widget
+                      // Live Quizzes
                       liveQuizzes(),
-
-                      // Extra space after list
                     ],
                   ),
                 ),
               ),
-            ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

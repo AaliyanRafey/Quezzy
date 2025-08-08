@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:queezy_app/res/routes/routes_name.dart';
 import 'package:queezy_app/utils/widgets/click_button.dart';
@@ -18,25 +20,25 @@ class _OnboardingScreenView3State extends State<OnboardingScreenView3> {
       body: Stack(
         children: [
           Positioned(
-            height: 241.65625,
-            width: 241.65625,
-            top: -51.09,
-            left: 247.91,
+            height: 241.65625.h,
+            width: 241.65625.w,
+            top: -51.09.h,
+            left: 247.91.w,
             child: Image.asset('assets/images/oval3b.png'),
           ),
 
           Positioned(
-            height: 418,
-            width: 418,
-            top: -86,
-            left: 103,
+            height: 418.h,
+            width: 418.w,
+            top: -86.h,
+            left: 103.w,
             child: Image.asset('assets/images/oval3a.png'),
           ),
           Positioned(
-            height: 48,
-            width: 48,
-            top: 136,
-            left: 82,
+            height: 48.h,
+            width: 48.w,
+            top: 136.h,
+            left: 82.w,
             child: Image.asset('assets/images/oval1.png'),
           ),
           // Positioned(
@@ -47,69 +49,69 @@ class _OnboardingScreenView3State extends State<OnboardingScreenView3> {
           //   child: Image.asset('assets/images/oval2.png'),
           // ),
           Positioned(
-            height: 20,
-            width: 20,
-            top: 460,
-            left: 323,
+            height: 20.h,
+            width: 20.w,
+            top: 460.h,
+            left: 323.w,
             child: Image.asset('assets/images/oval2.png'),
           ),
           Positioned(
-            height: 418,
-            width: 418,
-            top: 432,
-            left: -85,
+            height: 418.h,
+            width: 418.w,
+            top: 432.h,
+            left: -95.w,
             child: Image.asset('assets/images/oval4.png'),
           ),
           Positioned(
-            height: 241.65625,
-            width: 241.65625,
-            top: 526.91,
-            left: -50.09,
+            height: 241.65625.h,
+            width: 241.65625.w,
+            top: 526.91.h,
+            left: -50.09.w,
             child: Image.asset('assets/images/oval4a.png'),
           ),
           Positioned(
-            top: 206,
-            left: 55,
+            top: 206.h,
+            left: 55.w,
             child: Image.asset(
               'assets/images/onboard.png',
-              height: 264,
-              width: 317.420654296875,
+              height: 264.h,
+              width: 317.420654296875.w,
             ),
           ),
           Positioned(
-            top: 602,
-            left: 180,
+            top: 602.h,
+            left: 180.w,
             child: Row(
-              spacing: 15,
+              spacing: 15.w,
               children: [
                 Container(
-                  height: 9,
-                  width: 9,
+                  height: 9.h,
+                  width: 9.w,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color(0xffFFFFFF),
                   ),
                 ),
                 Container(
-                  height: 9,
-                  width: 9,
+                  height: 9.h,
+                  width: 9.w,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color(0xffFFFFFF),
                   ),
                 ),
                 Container(
-                  height: 18,
-                  width: 18,
+                  height: 18.h,
+                  width: 18.w,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: Color(0xffFFFFFF), width: 3),
+                    border: Border.all(color: Color(0xffFFFFFF), width: 3.w),
                   ),
                   child: Align(
                     alignment: Alignment.center, // You can change this!
                     child: Container(
-                      height: 9, // As per your requirement
-                      width: 9,
+                      height: 9.h, // As per your requirement
+                      width: 9.w,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Color(0xffFFFFFF),
@@ -122,28 +124,28 @@ class _OnboardingScreenView3State extends State<OnboardingScreenView3> {
           ),
 
           Positioned(
-            top: 645,
-            left: 15,
+            top: 645.h,
+            left: 15.w,
             child: Container(
-              height: 244,
-              width: 383,
+              height: 244.h,
+              width: 383.w,
               decoration: BoxDecoration(
                 color: Color(0xffFFFFFF),
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(25.r),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.h),
                   Text(
                     'Take part in challenges\n           with friends',
                     style: TextStyle(
                       fontFamily: 'RubikMed',
-                      fontSize: 27,
-                      fontWeight: FontWeight.w100,
+                      fontSize: 28.sp,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(height: 25),
+                  SizedBox(height: 25.h),
 
                   ClickButton(
                     buttonColor: Color(0xff6A5AE0),
@@ -153,30 +155,34 @@ class _OnboardingScreenView3State extends State<OnboardingScreenView3> {
                       Get.toNamed(RoutesName.loginorsignup);
                     },
                   ),
+                  SizedBox(height: 30.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
-                        'Already have an account?',
-                        style: TextStyle(
-                          fontFamily: 'RubikReg',
-                          fontWeight: FontWeight.w900,
-                          fontSize: 16,
-                          color: Color(0xff858494),
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          Get.toNamed(RoutesName.loginView);
-                        },
-                        child: Text(
-                          'Login',
+                      RichText(
+                        text: TextSpan(
                           style: TextStyle(
-                            fontFamily: 'RubikBold',
-                            fontSize: 16,
-                            color: Color(0xff6A5AE0),
+                            fontFamily: 'RubikReg',
+                            fontSize: 16.sp,
+                            color: Color(0xff858494),
                           ),
+                          children: [
+                            TextSpan(text: 'Already have an account? '),
+                            TextSpan(
+                              text: 'Login',
+                              style: TextStyle(
+                                fontFamily: 'RubikBold',
+                                fontSize: 16.sp,
+                                color: Color(0xff6A5AE0),
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  // 👇 Navigate to Login screen here
+                                  Get.toNamed(RoutesName.loginView);
+                                },
+                            ),
+                          ],
                         ),
                       ),
                     ],
