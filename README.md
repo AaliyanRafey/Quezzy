@@ -1,16 +1,24 @@
 # queezy_app
 
-A new Flutter project.
+Quizzy is a unique Flutter quiz app built with Dart, GetX, and MVVM. Users can sign in with Google, Facebook, or Email, create custom quizzes with various question types, and explore Home, Discover, Leaderboard, and Profile screens. Smooth UI, smart logic, and fun learning combined!
+## Screenshots
 
-## Getting Started
+| Splash | Onboarding |
+|--------|------------|
+| ![](screenshots/splash.jpg) | ![](screenshots/onboard.jpg) |
 
-This project is a starting point for a Flutter application.
+| Login | Login View |
+|-------|------------|
+| ![](screenshots/login.jpg) | ![](screenshots/loginView.jpg) |
 
-A few resources to get you started if this is your first Flutter project:
+| Signup | Forgot Password |
+|--------|-----------------|
+| ![](screenshots/signup.jpg) | ![](screenshots/forgotPassword.jpg) |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Home | Create Quiz |
+|------|-------------|
+| ![](screenshots/home.jpg) | ![](screenshots/createQuiz.jpg) |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Play Quiz |
+|-----------|
+| ![](screenshots/playQuiz.jpg) |
