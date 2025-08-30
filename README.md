@@ -21,9 +21,30 @@ Quizzy is a unique Flutter quiz app built with Dart, GetX, and MVVM. Users can s
 
 <p align="center">
   <img src="screenshots/home.jpg" width="250">
+  <img src="screenshots/select.jpg" width="250">
+</p>
+
+<p align="center">
+  <img src="screenshots/discover.jpg" width="250">
+  <img src="screenshots/discover1.jpg" width="250">
+</p>
+
+<p align="center">
+  <img src="screenshots/leader.jpg" width="250">
+  <img src="screenshots/profile.jpg" width="250">
+</p>
+
+<p align="center">
+  <img src="screenshots/select.jpg" width="250">
   <img src="screenshots/createQuiz.jpg" width="250">
 </p>
 
 <p align="center">
   <img src="screenshots/playQuiz.jpg" width="250">
+  <img src="screenshots/playquiz2.jpg" width="250">
+</p>
+
+<p align="center">
+  <img src="screenshots/result.jpg" width="250">
+  <img src="screenshots/setting.jpg" width="250">
 </p>
